@@ -1,0 +1,192 @@
+@font-face{
+    font-family:Lato;
+    font-style:normal;
+    font-weight:500;
+    src:url(../singolo/assets/fonts/Lato/Lato-Light.ttf) 
+    }
+ @font-face{
+    font-family:Lato-bold;
+    font-style:normal;
+    font-weight:500;
+    src:url(../singolo/assets/fonts/Lato/Lato-Black.ttf) 
+    }   
+
+body{
+    margin: 0;
+    width: 1020px;
+}
+/* Header */
+.logotipeDarkLine{
+    background-color: #2d303a;
+    height: 88px;
+}
+.singolo{
+    font-size: 25px;
+    line-height: 6px;
+    color: #ffffff;
+    font-family: "Lato";
+    position: absolute;
+    margin: 42px 0 0 39px;
+    text-transform: uppercase;
+}
+.star{
+    color: #f06c64;
+}
+/* Buttons */
+.topButtons{
+    display: flex;
+    position: absolute;
+    margin: 38px 0 0 153px;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    margin: 45px 15px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "Lato";
+    font-weight: 700;
+}
+a:hover{
+    color: #f06c64;
+}
+li{
+    list-style-type: none;
+}
+nav{
+    margin: 0 20px 0 400px;
+}
+.lineDark{
+    height:  6px;
+    background-color: #323746;
+}
+/* Slider */
+.sliderRedBody{
+    height: 585px;
+    background-color: #f06c64;
+}
+.iphoneVertical{
+    width: 216px;
+    height: 460px;
+    position: absolute;
+    margin: 51px 0 0 111px;
+    box-shadow: 25px 25px 0 #ce5d56;
+    border-radius: 28px;
+    background-image: url(../singolo/assets/images/verticalPhone.png);
+    background-size: 216px 460px;
+}
+.iphoneHorizontal{
+    width: 460px;
+    height: 216px;
+    position: absolute;
+    margin: 173px 0 0 424px;
+    box-shadow: 25px 25px 0px 0px #ce5d56;
+    border-radius: 28px;
+    background-image: url(../singolo/assets/images/HorizontalPhone.png);
+    background-size: 460px 216px;
+}
+.leftBar{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    margin: 273px 0 0 30px;
+    cursor: pointer;
+    transition: all 0.5s;
+    background: url(../singolo/assets/images/chev.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.leftBar:hover{
+    background: url(../singolo/assets/images/leftBar.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.rightBar{
+    width: 40px;
+    height: 40px;
+    margin: 274px 0 0 952px;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.5s;
+    background: url(../singolo/assets/images/right.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.rightBar:hover{
+    background: url(../singolo/assets/images/rightDark.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.redLine{
+    height: 14px;
+    background-color: #ea676b;
+}
+/* Services */
+.services{
+    height: 495px;
+    background-color: #f2f2f2;
+}
+.ourServices{
+    font-size: 30px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato-bold";
+    margin: 68px 0 0 41px;
+    position: absolute;
+}
+.ourSrvicesText{
+    width: 946px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato";
+    margin: 113px 0 0 41px;
+    position: absolute;
+    word-spacing: 1px;
+}
+.container{
+    display: flex;
+    position: absolute;
+    margin: 218px 0 0 40px;
+    flex-wrap: wrap;
+    width: 1020px;
+    height: 155px;
+}
+.lineWhite{
+    width: 1020px;
+    height: 6px;
+    background-color: #ffffff;
+}
+.flexMainText{
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato-bold";
+    font-weight: 900;
+    text-align: left;
+    margin: -1px 0 0px 17px;
+    letter-spacing: 0px;
+}
+.flexText{
+    width: 219px;
+    height: 128px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 700;
+    text-align: left;
+    margin: 11px 0 0 19px;
+    word-spacing: 1px;
+    text-align: justify;
+    word-wrap: break-word; 
+}
+.containerItem{
+    display: flex;
+    height: 123px;
+    width: 320px;
+}
+.image{
+    margin-bottom: auto;
+}

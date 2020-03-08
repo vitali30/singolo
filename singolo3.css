@@ -1,0 +1,229 @@
+@font-face{
+    font-family:Lato;
+    font-style:normal;
+    font-weight:500;
+    src:url(../singolo/assets/fonts/Lato/Lato-Light.ttf) 
+}
+ @font-face{
+    font-family:Lato-bold;
+    font-style:normal;
+    font-weight:500;
+    src:url(../singolo/assets/fonts/Lato/Lato-Black.ttf) 
+}   
+body{
+    margin: 0;
+    width: 1020px;
+  
+}
+.getAQuote{
+    width: 1020px;
+    height: 648px;
+    background-color: #f06c64;
+    
+}
+
+.redLine{
+    width: 1020px;
+    height: 6px;
+    background-color: #ea676b;
+}
+.getAh1{
+  
+    font-size: 30px;
+    line-height: 18px;
+    color: #f0d8d9;
+    font-family: "Lato-bold";
+    font-weight: 600;
+    text-align: left;
+    margin: 68px 0px 0px 40px;
+    display: inline-block;
+    letter-spacing: -0.1px;
+    word-spacing: -0.5px;
+}
+.someText{
+    width: 940px;
+    height: 57px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #f0d8d9;
+    font-family: "Lato";
+    font-weight: 300;
+    text-align: justify;
+    margin: 20px 0px 0px 40px;
+    display: inline-block;
+
+}
+.inputs{
+    cursor: pointer;
+    width: 604px;
+    height: 38px;
+    border-radius: 5px;
+    border: 0px solid #d6564f;
+    background-color: #d6564f;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f48c8f;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: left;
+    margin: 0px 0px 16px 0px;
+    padding: 0px 0px 0px 15px;
+    letter-spacing: 0.1px;
+   
+}
+.inputs2{
+    cursor: pointer;
+    width: 604px;
+    height: 195px;
+    border-radius: 5px;
+    border: 0px solid #d6564f;
+    background-color: #d6564f;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f48c8f;
+    font-family: "Lato";
+    font-weight: 400;
+    flex-wrap: xwrap;
+    padding: 7px 0px 0px 15px;
+    resize: none;
+    letter-spacing: 0.1px;
+    word-spacing: 0px;
+    }
+::-webkit-input-placeholder { 
+    color: #f48c8f; 
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 630px 390px;
+    margin: 47px 0px 0px 40px;
+}
+.contactText{
+    width: 299px;
+    height: 92px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f0d8d9;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: justify;
+    margin: 10px 0px 0px 10px;
+    word-wrap: break-word;
+    
+}
+.contactHead{
+    font-size: 18px;
+    line-height: 18px;
+    color: #f0d8d9;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: left;
+    margin: 0px 0px 0px 10px;
+    letter-spacing: 0.5px;
+    word-spacing: 0px;
+}
+ul{
+    margin: 16px 0px 0px 6px;
+    padding: 0px 0px 0px 0px;
+}
+li{
+    list-style-type: none;
+    display: flex;
+    height: 21px;
+}
+.string1{
+    margin: 0px 0px 0px 0px;
+}
+.string2{
+    margin: 0px 0px 0px 0px;
+}
+.string3{
+    margin: 3px 0px 0px 0px;
+}
+.contactsList{
+    font-size: 12px;
+    line-height: 22px;
+    color: #f0d8d9;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: left;
+}
+.location{
+    background-image: url(../singolo/assets/images/location.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    
+}
+.location:hover{
+    background-image: url(../singolo/assets/images/location\ \(1\).png);
+}
+
+.phone{
+    background-image: url(../singolo/assets/images/phone\ \(1\).png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+  
+}
+.phone:hover{
+    background-image: url(../singolo/assets/images/phone\ \(2\).png);
+}
+.mail{
+    background-image: url(../singolo/assets/images/mail.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+   
+}
+.mail:hover{
+    background-image: url(../singolo/assets/images/mail\ \(1\).png);
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0px 0px 0px 0px;
+    }
+a:hover{
+    color: #000000;
+}
+.redLine{
+    width: 1020px;
+    height: 6px;
+    background-color: #ea676b;
+    
+}
+.darkSide{
+    width: 1020px;
+    height: 76px;
+    background-color: #2d303a;
+    display: inline-block;
+    
+}
+.footerLable{
+   
+    font-size: 12px;
+    line-height: 30px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 300;
+    text-align: left;
+    display: inline-block;
+    margin: 22px 0px 0px 41px;
+
+}
+.list1{
+    margin: 0px 0px 0px 7px;
+}
+.list2{
+    margin: 0px 0px 0px 7px;
+}
+.list3{
+    margin: -2px 0px 0px 7px;
+}
+.submit{
+    margin: 0px 0px 0px 7px;
+}

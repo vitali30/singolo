@@ -1,0 +1,358 @@
+@font-face{
+    font-family:Lato;
+    font-style:normal;
+    font-weight:500;
+    src:url(../singolo/assets/fonts/Lato/Lato-Light.ttf) 
+}
+ @font-face{
+    font-family:Lato-bold;
+    font-style:normal;
+    font-weight:500;
+    src:url(../singolo/assets/fonts/Lato/Lato-Black.ttf) 
+}   
+body{
+    margin: 0;
+    width: 1020px;
+}
+.portfolio{
+    width: 1020px;
+    height: 864px;
+    background-color: #2d303a;
+}
+.darkLine{
+    width: 1020px;
+    height: 6px;
+    background-color: #323746;
+}
+.headerPort{
+    font-size: 30px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato-bold";
+    position: absolute;
+    margin: 68px 0 0 40px;
+}
+.headerText{
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato";
+    margin: 115px 0 0 40px;
+    position: absolute;
+}
+li{
+    list-style-type: none;
+}
+.buttons{
+    display: flex;
+    position: absolute;
+    margin: 156px 0 0 40px;
+    padding: 0;
+}
+a{
+    border-radius: 5px;
+    background-color: #0f0f0f;
+    border: 1px solid #666d89;
+    text-decoration: none;
+    margin: 0 10px 0 0;
+    font-size: 12px;
+    font-family: "Lato";
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 22px;
+    color: #767e9e;
+}
+
+a:hover{
+    color: #c5c5c5;
+    background-color: #2d303a;
+}
+.a1{
+    padding: 3px 8px 2px 8px;
+}
+.a2{
+    padding: 3px 7px 2px 6px;
+}
+.a3{
+    padding: 3px 6px 2px 5px;
+}
+.a4{
+    padding: 3px 6px 2px 7px;
+}
+.imagesStack{
+    display: flex;
+    position: absolute;
+    margin: 196px 0 0 40px;
+    flex-wrap: wrap;
+    width: 1020px;
+    height: 610px;
+}  
+.img:nth-child(n+13) {
+    display: none;
+    width: 0;
+    height: 0;
+}
+.image1{
+    width: 220px;
+    height: 187px;
+    background-image: url(../singolo/assets/images/Project\ \(11\).png);
+    background-position-x: -8px;
+    background-position-y: -11px;
+    background-size: 238px 238px;
+    margin: 0 10px 5px 0;
+    
+}
+.image2{
+    width: 220px;
+    height: 187px;
+    background-image: url(../singolo/assets/images/Project\ \(8\).png);
+    background-position-x: -82px;
+    background-position-y: -43px;
+    background-size: 364px 273px;
+    margin: 0px 0px 0px 10px;
+}
+.image3{
+    width: 220px;
+    height: 187px;
+    background-image: url(../singolo/assets/images/Layer\ 9.png);
+    background-position-x: -11px;
+    background-position-y: -1px;
+    background-size: 250px 304px;
+    margin: 0 5px 5px 20px;
+}
+.image4{
+    width: 220px;
+    height: 187px;
+    background-image: url(../singolo/assets/images/Project\ \(1\).png);
+    background-position-x: -24px;
+    background-position-y: -2px;
+    background-size: 262px 196px;
+    margin: 0 5px 5px 15px;
+}
+.image5{
+    width: 220px;
+    height: 187px;
+    background-image: url(../singolo/assets/images/Project\ \(10\).png);
+    background-position-x: -10px;
+    background-position-y: -16px;
+    background-size: 242px 276px;
+    margin: 15px 5px 5px 0px;
+}
+.image6{
+    width: 220px;
+    height: 187px;
+    background-image: url(../singolo/assets/images/Project\ \(7\).png);
+    background-position-x: -16px;
+    background-position-y: -4px;
+    background-size: 258px 194px;
+    margin: 15px 10px 5px 15px;
+}
+.image7{
+    width: 220px;
+    height: 187px;
+    background-image: url(../singolo/assets/images/Layer\ 11.png);
+    background-position-x: -31px;
+    background-position-y: -39px;
+    background-size: 372px 372px;
+    margin: 15px 10px 5px 10px;
+}
+.image8{
+    width: 220px;
+    height: 187px;
+    background-image: url(../singolo/assets/images/Layer\ 8.png);
+    background-position-x: -24px;
+    background-position-y: -32px;
+    background-size: 278px 278px;
+    margin: 15px 10px 5px 10px;
+}
+.image9{
+    width: 220px;
+    height: 187px;
+    background-image: url(../singolo/assets/images/Project\ \(9\).png);
+    background-position-x: -16px;
+    background-position-y: -2px;
+    background-size: 254px 191px;
+    margin: 15px 10px 5px 0px
+}
+.image10{
+    width: 220px;
+    height: 187px;
+    background-image: url(../singolo/assets/images/Project\ \(3\).png);
+    background-position-x: -141px;
+    background-position-y: -113px;
+    background-size: 474px 663px;
+    margin: 15px 10px 5px 10px;
+}
+.image11{
+    width: 220px;
+    height: 187px;
+    background-image: url(../singolo/assets/images/Project\ \(2\).png);
+    background-position-x: -144px;
+    background-position-y: 238px;
+    background-size: 414px 413px;
+    margin: 15px 10px 5px 10px;
+}
+.image12{
+    width: 220px;
+    height: 187px;
+    background-image: url(../singolo/assets/images/Project.png);
+    background-position-x: -36px;
+    background-position-y: 365px;
+    background-size: 296px 425px;
+    margin: 15px 10px 5px 10px;
+}
+.aboutUs{
+    width: 1020px;
+    height: 728px;
+    background-color: #f2f2f2;
+}
+.whiteLine{
+    width: 1020px;
+    height: 6px;
+    background-color: #ffffff;
+}
+.h2aboutUs{
+    font-size: 30px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato-bold";
+    margin: 68px 0px 0px 40px;
+    position: absolute;
+    word-spacing: -0.5px
+}
+
+.pAboutUs{
+    width: 950px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato";
+    position: absolute;
+    margin: 113px 0px 0px 40px;
+    word-spacing: 1.05px;
+}
+.container{
+    display: flex;
+    position: absolute;
+    margin: 218px 0 0 40px;
+    flex-wrap: wrap;
+    width: 1020px;
+    height: 155px;
+    position: absolute;
+}
+.fotoFace1{
+    width: 300px;
+    height: 300px;
+    background-image: url(../singolo/assets/images/photo\ \(2\).png);
+    margin: 0px 19px 0 0px;
+}
+.fotoFace2{
+    width: 300px;
+    height: 300px;
+    background-image: url(../singolo/assets/images/photo\ \(1\).png);
+    margin: 0px 21px 0 0px;
+}
+.fotoFace3{
+    width: 300px;
+    height: 300px;
+    background-image: url(../singolo/assets/images/photo.png);
+}
+.name{
+    width: 300px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato-bold";
+    margin: 17px 0px 0 -1px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+.aboutMe1{
+    width: 300px;
+    font-size: 12px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 600;
+    margin: -2px 0px 0 -1px;
+    word-spacing: 0.7px;
+    line-height: 180%;
+}
+
+.aboutMe2{
+    width: 300px;
+    font-size: 12px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 600;
+    margin: -2px 0px 0 1px;
+    word-spacing: 2.4px;
+    line-height: 180%;
+}
+.aboutMe3{
+    width: 300px;
+    font-size: 12px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 600;
+    margin: -2px 0px 0 -1px;
+    word-spacing: 1.7px;
+    line-height: 180%;
+}
+.fb{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    margin: 20px 6px 0 -3px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../singolo/assets/images/Facebook.png);
+}
+.fb:hover{
+    background-image: url(../singolo/assets/images/facebook\ \(1\).png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.google{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    margin: 20px 0px 0 37px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../singolo/assets/images/Google.png);
+}
+.google:hover{
+    background-image: url(../singolo/assets/images/google+.png);
+}
+.twitter{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    margin: 20px 0px 0 77px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../singolo/assets/images/Twitter.png);
+}
+.twitter:hover{
+    background-image: url(../singolo/assets/images/twitter\ \(1\).png);
+}
+.linkedIn{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    margin: 20px 0px 0 117px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../singolo/assets/images/LinkedIn.png);
+}
+.linkedIn:hover{
+    background-image: url(../singolo/assets/images/linkedin\ \(1\).png);
+}
