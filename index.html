@@ -6,41 +6,51 @@
          <title>Singolo</title>
     </head>
     <body>
+        
         <header>
-<!-- Singolo -->
+
             <div class = "logotipeDarkLine">
                 <h1 class = "singoloLable">singolo<span class = "star">*</span></h1>
                 <nav class = "navigationBar">
-                    <ul class= "flexContainer">
-                        <li><a href="#">home</a></li>
-                        <li><a href="#">services</a></li>
-                        <li><a href="#">portfolio</a></li>
-                        <li><a href="#">about</a></li>
-                        <li><a href="#">contact</a></li>
+                    <ul class= "flexContainer" id = "menu">
+                        <li><a  class = "headerButton" href="#">home</a></li>
+                        <li><a  class = "headerButton" href="#services">services</a></li>
+                        <li><a class = "headerButton"  href="#portfolio">portfolio</a class = "headerButton"></li>
+                        <li><a class = "headerButton"  href="#aboutUs">about</a class = "headerButton"></li>
+                        <li><a class = "headerButton"  href="#getAQuote">contact</a class = "headerButton"></li>
                     </ul>
                 </nav>
             </div>
             <div class = "lineDark"></div>
         </header>
     
-        <div class = "sliderRedBody">
-            <div class = "iphoneVertical"></div>
-            <div class = "iphoneHorizontal"></div>
-            <div class = "leftBar"></div>
-            <div class = "rightBar"></div>
-        </div>
+        <section class = "sliderRedBody" id = "slider">
+            <div id = "some">
+                <div class = "iphoneVertical"></div>
+                <div class = "iphoneHorizontal"></div>
+                <div class = "iphoneVerticalActiveScreen opacity"></div>
+                <div class = "iphoneVerticalActiveZone opacity"></div>
+                <div class = "iphoneHorizontalActiveZone opacity"></div>
+                <div class = "iphoneHorizontalScreen opacity" ></div>
+
+            </div>
+                <div class = "leftBar bar"></div>
+                <div class = "rightBar bar"></div>
+            
+        </section>
 
         <div class = "redLine"></div>
-<!-- Our Services -->
-    <div class = "services">
+
+    <section class = "services">
+        <a name = "services"></a>
         <div class = "servicesHeading">
             <h2 class = "ourServices">Our Services</h2>
             <p class = "ourSrvicesText">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
                 Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
                 Fusce dapibus tellus ac cursus commodo, torto mairus condimentum nibh.</p>
         </div>
-        <div class = "flexContainer">
 
+        <div class = "flexContainer">
             <div class = "containerItem">
                 <img  class = "image"src = "../singolo/assets/images/pen.png" alt = "pen">
                 <div>
@@ -90,20 +100,21 @@
             </div>
 
         </div>
-    </div>
+    </section>
 
     <div class = "lineWhite"></div>
-<!-- Portfolio -->
-    <div class = "portfolio">
+
+    <section class = "portfolio">
+        <a name = "portfolio"></a>
         <div class = 'portfolioHeading'>
             <h1 class = "portfolioLable">Portfolio</h1> 
             <p class = "portfolioText">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia 
                 odio sem nec elit</p>
-            <ul class = "buttons flexContainer">
-                <li><a class = "a1" href="#"> All </a></li>
-                <li><a class = "a2" href="#">Web Design</a></li>
-                <li><a class = "a3" href="#">Graphic Design</a></li>
-                <li><a class = "a4" href="#">Artwork</a></li>
+            <ul class = "buttons flexContainer" id = "menu2">
+                <li><a class = "a1" href="#portfolio" > All </a></li>
+                <li><a class = "a2" href="#portfolio">Web Design</a></li>
+                <li><a class = "a3" href="#portfolio">Graphic Design</a></li>
+                <li><a class = "a4" href="#portfolio">Artwork</a></li>
             </ul>
         </div>
 
@@ -121,10 +132,11 @@
             <div class="image11 img"></div>
             <div class="image12 img"></div>
         </div>
-    </div>
+    </section>
     <div class="darkLine"></div>
-<!-- About Us -->
-    <div class="aboutUs">
+
+    <section class="aboutUs">
+        <a name = "aboutUs"></a>
         <div class = "aboutUsHeading">
             <h2 class="aboutUsLable">About Us</h2>
             <p class="aboutUsText">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, 
@@ -172,10 +184,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <div class="whiteLine"></div>
-<!-- Get a Quote -->
-    <div class = "getAQuote">
+
+    <section class = "getAQuote">
+        <a name = "getAQuote"></a>
         <div>
             <h1 class = 'getAQuoteLable'>Get a Quote</h1>
             <p class = "getAQuoteText">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
@@ -183,12 +196,13 @@
                 Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         </div>
         <div class = "grid">
-            <div>
+            <form method="POST">
                 <input type="text" name="name" placeholder="Name (Required)" size="50" id="id1" class = "inputs"/>
                 <input type="text" name="email" placeholder="Email (Required)" size="50" id="id2" class = "inputs"/>
                 <input type="text" name="subject" placeholder="Subject" size="50" id="id3" class = "inputs"/>
                 <textarea name="description" id="1d4" class="inputsTextArea" placeholder="Describe your project in detail..." maxlength="400" rows="5"></textarea>
-            </div>
+                <button type="submit" formmethod="POST">Submit</button>
+            </form>
             <div class = "contactInfirmation">
                 <h2 class = "contactHead">Contact Information</h2>
                 <p class = "contactText">Quisque hendrerit purus dapibus, ornare nibh vitae, viver-ra nibh. 
@@ -209,13 +223,13 @@
                     </li>
                     
                 </ul>
-                <input type="submit" name="submit" value="Submit" class = "submit"/>
+                
             </div>
         </div>
-   </div>
+   </section>
 
     <div class = "redLineBottom"></div>
-<!-- Footer -->
+
    <footer class = "footerSide">
         <div class = "gridFooter">
             <p class = "footerLable">&copy; Copyright 2013 by PSDchat.com</p>
@@ -227,6 +241,8 @@
             </div>
         </div>
    </footer>
-
+  
+<script src="script.js"></script>
     </body>
+   
 </html>

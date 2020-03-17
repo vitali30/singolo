@@ -15,7 +15,6 @@ body{
     margin: 0;
     width: 1020px;
 }
-/* Header */
 .logotipeDarkLine{
     background-color: #2d303a;
     height: 89px;
@@ -47,7 +46,7 @@ body{
 li{
     list-style-type: none;
 }
-.navigationBar a{
+.navigationBar .headerButton{
     text-decoration: none;
     color: #ffffff;
     text-align: center;
@@ -58,14 +57,23 @@ li{
     font-weight: 700;
     letter-spacing: -0.1px;
 }
-.navigationBar a:hover{
+
+
+.headerButton.active{
+    
     color: #f06c64;
 }
+.headerButton:not(.active):hover{
+    cursor: pointer;
+    color: #f06c64;
+} 
+
+
+
 .lineDark{
     height:  6px;
     background-color: #323746;
 }
-/* Slider */
 .sliderRedBody{
     height: 594px;
     background-color: #f06c64;
@@ -126,7 +134,6 @@ li{
     height: 14px;
     background-color: #ea676b;
 }
-/* Services */
 .services{
     height: 494px;
     background-color: #f2f2f2;
@@ -191,7 +198,6 @@ li{
     height: 6px;
     background-color: #ffffff;
 }
-/* Portfolio */
 .portfolio{
     width: 1020px;
     height: 863px;
@@ -232,10 +238,21 @@ li{
     line-height: 22px;
     color: #767e9e;
 }
-.buttons a:hover{
+ .buttons a:hover{
+    color: #c5c5c5;
+    background-color: #2d303a;
+} 
+.buttons a.active{
     color: #c5c5c5;
     background-color: #2d303a;
 }
+.buttons a:not(.active):hover{
+    color: #c5c5c5;
+    background-color: #2d303a;
+}
+
+
+
 .a1{
     padding: 3px 7px 2px 8px;
 }
@@ -249,9 +266,10 @@ li{
     padding: 3px 6px 2px 8px;
 }
 .imagesStack{
-    margin: 195px 0 0 40px;
+
+    padding: 195px 0 0 40px ;
     flex-wrap: wrap;
-    width: 1020px;
+    width: 950px;
     height: 610px;
 }  
 .img:nth-child(n+13) {
@@ -259,120 +277,100 @@ li{
     width: 0;
     height: 0;
 }
-.image1{
+.img{
+    margin: 0px 10px 0px 5px;
     width: 220px;
     height: 187px;
+}
+.image1{
+    
     background-image: url(../singolo/assets/images/Project\ \(11\).png);
     background-position-x: -8px;
     background-position-y: -11px;
     background-size: 238px 238px;
-    margin: 0 10px 5px 0;
 }
 .image2{
-    width: 220px;
-    height: 187px;
+    
     background-image: url(../singolo/assets/images/Project\ \(8\).png);
     background-position-x: -82px;
     background-position-y: -43px;
     background-size: 364px 273px;
-    margin: 0px 0px 0px 10px;
 }
 .image3{
-    width: 220px;
-    height: 187px;
+   
     background-image: url(../singolo/assets/images/Layer\ 9.png);
     background-position-x: -11px;
     background-position-y: -1px;
     background-size: 250px 304px;
-    margin: 0 5px 5px 20px;
 }
 .image4{
-    width: 220px;
-    height: 187px;
+ 
     background-image: url(../singolo/assets/images/Project\ \(1\).png);
     background-position-x: -24px;
     background-position-y: -2px;
     background-size: 262px 196px;
-    margin: 0 5px 5px 15px;
 }
 .image5{
-    width: 220px;
-    height: 187px;
+   
     background-image: url(../singolo/assets/images/Project\ \(10\).png);
     background-position-x: -10px;
     background-position-y: -16px;
     background-size: 242px 276px;
-    margin: 11px 5px 5px 0px;
 }
 .image6{
-    width: 220px;
-    height: 187px;
+  
     background-image: url(../singolo/assets/images/Project\ \(7\).png);
     background-position-x: -16px;
     background-position-y: -4px;
     background-size: 258px 194px;
-    margin: 11px 10px 5px 15px;
 }
 .image7{
-    width: 220px;
-    height: 187px;
+   
     background-image: url(../singolo/assets/images/Layer\ 11.png);
     background-position-x: -31px;
     background-position-y: -39px;
     background-size: 372px 372px;
-    margin: 11px 10px 5px 10px;
 }
 .image8{
-    width: 220px;
-    height: 187px;
+  
     background-image: url(../singolo/assets/images/Layer\ 8.png);
     background-position-x: -24px;
     background-position-y: -32px;
     background-size: 278px 278px;
-    margin: 11px 10px 5px 10px;
 }
 .image9{
-    width: 220px;
-    height: 187px;
+ 
     background-image: url(../singolo/assets/images/Project\ \(9\).png);
     background-position-x: -16px;
     background-position-y: -2px;
     background-size: 254px 191px;
-    margin: 11px 10px 5px 0px
 }
 .image10{
-    width: 220px;
-    height: 187px;
+   
     background-image: url(../singolo/assets/images/Project\ \(3\).png);
     background-position-x: -141px;
     background-position-y: -113px;
     background-size: 474px 663px;
-    margin: 11px 10px 5px 10px;
 }
 .image11{
-    width: 220px;
-    height: 187px;
+ 
     background-image: url(../singolo/assets/images/Project\ \(2\).png);
     background-position-x: -144px;
     background-position-y: 238px;
     background-size: 414px 413px;
-    margin: 11px 10px 5px 10px;
 }
 .image12{
-    width: 220px;
-    height: 187px;
+    
     background-image: url(../singolo/assets/images/Project.png);
     background-position-x: -36px;
     background-position-y: 365px;
     background-size: 296px 425px;
-    margin: 11px 10px 5px 10px;
 }
 .darkLine{
     width: 1020px;
     height: 6px;
     background-color: #323746;
 }
-/* About Us */
 .aboutUs{
     width: 1020px;
     height: 728px;
@@ -528,7 +526,6 @@ li{
     height: 6px;
     background-color: #ffffff;
 }
-/* get A Quote */
 body{
     margin: 0;
     width: 1020px;
@@ -698,7 +695,7 @@ body{
     height: 6px;
     background-color: #ea676b;  
 }
-/* Footer */
+
 .footerSide{
     width: 1020px;
     height: 76px;
@@ -722,4 +719,59 @@ body{
 }
 .contactsAllFooter{
     margin: -2px 0px 0px 0px;
+}
+
+.slide2{
+
+    position: absolute;
+   
+    background-color: #482fb8;
+    
+}
+.iphoneVerticalActiveScreen{
+    width: 189px;
+    height: 333px;
+    background-color: #000000;
+    position: absolute;
+    margin: 118px 0 0 126px;
+
+}
+.opacity{
+    opacity: 0;
+}
+.iphoneVerticalActiveZone{
+    width: 47px;
+    height: 43px;
+    background-color: #968989;
+    position: absolute;
+    margin: 460px 0 0 197px;
+    border-radius: 34px;
+
+}
+
+.iphoneHorizontalActiveZone{
+    width: 47px;
+    height: 43px;
+    background-color: #968989;
+    position: absolute;
+    margin: 261px 0 0 430px;
+    border-radius: 34px;
+}
+.iphoneHorizontalScreen{
+    width: 333px;
+    height: 188px;
+    background-color: #000000;
+    position: absolute;
+    margin: 188px 0 0 485px;
+
+}
+
+
+
+
+
+.bordered{
+    border: 2px solid yellowgreen;
+    width: 216px;
+    height: 183px;
 }
