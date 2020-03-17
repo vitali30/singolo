@@ -61,7 +61,8 @@ BAR1.addEventListener('click', (event)=>{
     curentSlide = 1
   }
   some.innerHTML = slides[curentSlide];
-  activeScreen();
+  if (curentSlide == 0) {activeScreen()};
+ 
 })
 
 const BAR = document.querySelector('.leftBar');
@@ -77,8 +78,8 @@ BAR.addEventListener('click', (event)=>{
   }
   some.innerHTML = slides[curentSlide];
   
-  activeScreen();
-})
+  if (curentSlide == 0) {activeScreen()};
+});
 
 
 
@@ -94,6 +95,7 @@ let array = document.querySelector('.imagesStack');
 
 
 MENU2.addEventListener('click', (event)=>{
+    
     MENU2.querySelectorAll('a').forEach(el => el.classList.remove('active'));
     event.target.classList.add('active');
 
@@ -111,10 +113,9 @@ MENU2.addEventListener('click', (event)=>{
 
 
 
-
-
 array.addEventListener("click", (event) => {
   if ( event.target.classList.contains("bordered") ) {
+  
     event.target.classList.remove("bordered");}
     else if (event.target.classList.contains("flexContainer")){}
   

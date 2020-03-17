@@ -57,7 +57,9 @@ li{
     font-weight: 700;
     letter-spacing: -0.1px;
 }
-
+/* .navigationBar a:hover{
+    color: #f06c64;
+} */
 
 .headerButton.active{
     
@@ -224,6 +226,7 @@ li{
 .buttons{
     margin: 155px 0 0 40px;
     padding: 0;
+    
 }
 .buttons a{
     border-radius: 5px;
@@ -234,14 +237,11 @@ li{
     font-size: 12px;
     font-family: "Lato";
     font-weight: 700;
-    cursor: pointer;
+    
     line-height: 22px;
     color: #767e9e;
 }
- .buttons a:hover{
-    color: #c5c5c5;
-    background-color: #2d303a;
-} 
+ 
 .buttons a.active{
     color: #c5c5c5;
     background-color: #2d303a;
@@ -250,7 +250,6 @@ li{
     color: #c5c5c5;
     background-color: #2d303a;
 }
-
 
 
 .a1{
@@ -266,8 +265,7 @@ li{
     padding: 3px 6px 2px 8px;
 }
 .imagesStack{
-
-    padding: 195px 0 0 40px ;
+   margin: 195px 0 0 40px;
     flex-wrap: wrap;
     width: 950px;
     height: 610px;
@@ -279,88 +277,99 @@ li{
 }
 .img{
     margin: 0px 10px 0px 5px;
-    width: 220px;
-    height: 187px;
+    
 }
 .image1{
-    
+    width: 220px;
+    height: 187px;
     background-image: url(../singolo/assets/images/Project\ \(11\).png);
     background-position-x: -8px;
     background-position-y: -11px;
     background-size: 238px 238px;
 }
 .image2{
-    
+    width: 220px;
+    height: 187px;
     background-image: url(../singolo/assets/images/Project\ \(8\).png);
     background-position-x: -82px;
     background-position-y: -43px;
     background-size: 364px 273px;
 }
 .image3{
-   
+    width: 220px;
+    height: 187px;
     background-image: url(../singolo/assets/images/Layer\ 9.png);
     background-position-x: -11px;
     background-position-y: -1px;
     background-size: 250px 304px;
 }
 .image4{
- 
+    width: 220px;
+    height: 187px;
     background-image: url(../singolo/assets/images/Project\ \(1\).png);
     background-position-x: -24px;
     background-position-y: -2px;
     background-size: 262px 196px;
 }
 .image5{
-   
+    width: 220px;
+    height: 187px;
     background-image: url(../singolo/assets/images/Project\ \(10\).png);
     background-position-x: -10px;
     background-position-y: -16px;
     background-size: 242px 276px;
 }
 .image6{
-  
+    width: 220px;
+    height: 187px;
     background-image: url(../singolo/assets/images/Project\ \(7\).png);
     background-position-x: -16px;
     background-position-y: -4px;
     background-size: 258px 194px;
 }
 .image7{
-   
+    width: 220px;
+    height: 187px;
     background-image: url(../singolo/assets/images/Layer\ 11.png);
     background-position-x: -31px;
     background-position-y: -39px;
     background-size: 372px 372px;
 }
 .image8{
-  
+    width: 220px;
+    height: 187px;
     background-image: url(../singolo/assets/images/Layer\ 8.png);
     background-position-x: -24px;
     background-position-y: -32px;
     background-size: 278px 278px;
 }
 .image9{
- 
+    width: 220px;
+    height: 187px;
     background-image: url(../singolo/assets/images/Project\ \(9\).png);
     background-position-x: -16px;
     background-position-y: -2px;
     background-size: 254px 191px;
 }
 .image10{
-   
+    width: 220px;
+    height: 187px;
     background-image: url(../singolo/assets/images/Project\ \(3\).png);
     background-position-x: -141px;
     background-position-y: -113px;
     background-size: 474px 663px;
 }
 .image11{
- 
+    width: 220px;
+    height: 187px;
     background-image: url(../singolo/assets/images/Project\ \(2\).png);
     background-position-x: -144px;
     background-position-y: 238px;
     background-size: 414px 413px;
 }
 .image12{
-    
+    width: 220px;
+    height: 187px;
     background-image: url(../singolo/assets/images/Project.png);
     background-position-x: -36px;
     background-position-y: 365px;
@@ -722,11 +731,8 @@ body{
 }
 
 .slide2{
-
     position: absolute;
-   
     background-color: #482fb8;
-    
 }
 .iphoneVerticalActiveScreen{
     width: 189px;
@@ -734,7 +740,6 @@ body{
     background-color: #000000;
     position: absolute;
     margin: 118px 0 0 126px;
-
 }
 .opacity{
     opacity: 0;
