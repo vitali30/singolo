@@ -197,11 +197,12 @@
         </div>
         <div class = "grid">
             <form method="POST">
-                <input type="text" name="name" placeholder="Name (Required)" size="50" id="id1" class = "inputs"/>
-                <input type="text" name="email" placeholder="Email (Required)" size="50" id="id2" class = "inputs"/>
-                <input type="text" name="subject" placeholder="Subject" size="50" id="id3" class = "inputs"/>
-                <textarea name="description" id="1d4" class="inputsTextArea" placeholder="Describe your project in detail..." maxlength="400" rows="5"></textarea>
-                <button type="submit" formmethod="POST">Submit</button>
+                <input type="text" name="name" size="50" id="id1" class = "inputs" placeholder="Name (Required)" required>
+                <input type="email" name="email" size="50" id="id2" class = "inputs" placeholder="Email (Required)" required>
+                <input type="text" name="subject" placeholder="Subject" size="50" id="id3" class = "inputs" maxlength="100">
+                <textarea name="description" id="id4" class="inputsTextArea" placeholder="Describe your project in detail..." maxlength="400" rows="5"></textarea>
+                <button type="submit" formmethod="POST" id = "button">Submit</button>
+                
             </form>
             <div class = "contactInfirmation">
                 <h2 class = "contactHead">Contact Information</h2>
@@ -227,7 +228,18 @@
             </div>
         </div>
    </section>
-
+   <div class = "messageBlock hiden" id = "messageBlock">
+       <div class = "message">
+            <p>Письмо отправлено</p>
+            <br>
+            <br>
+            <p><span id = "topic"></span></p>
+            <br>
+           <p><span id = "result"></span></p>
+           <br>
+           <button id= "closeButton"> OK</button>
+       </div>
+   </div>
     <div class = "redLineBottom"></div>
 
    <footer class = "footerSide">
