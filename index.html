@@ -1,124 +1,127 @@
-<!DOCTYPE html >
-<html lang="en" dir="ltr">
-    <head>
-        <link href="../singolo/style.css" type="text/css" rel="stylesheet"/>
-         <meta charset="utf-8">
-         <title>Singolo</title>
-    </head>
-    <body>
-        
-        <header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../singolo/style.css" type="text/css" rel="stylesheet"/>
 
-            <div class = "logotipeDarkLine">
-                <h1 class = "singoloLable">singolo<span class = "star">*</span></h1>
-                <nav class = "navigationBar">
-                    <ul class= "flexContainer" id = "menu">
-                        <li><a  class = "headerButton" href="#">home</a></li>
-                        <li><a  class = "headerButton" href="#services">services</a></li>
-                        <li><a class = "headerButton"  href="#portfolio">portfolio</a class = "headerButton"></li>
-                        <li><a class = "headerButton"  href="#aboutUs">about</a class = "headerButton"></li>
-                        <li><a class = "headerButton"  href="#getAQuote">contact</a class = "headerButton"></li>
-                    </ul>
-                </nav>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class= "header" >
+            <div class="header__logotype">
+                <h1>SINGOLO<span class="header__star">*</span></h1>
             </div>
-            <div class = "lineDark"></div>
-        </header>
-    
-        <section class = "sliderRedBody" id = "slider">
-            <div id = "some">
-                <div class = "iphoneVertical"></div>
-                <div class = "iphoneHorizontal"></div>
-                <div class = "iphoneVerticalActiveScreen opacity"></div>
-                <div class = "iphoneVerticalActiveZone opacity"></div>
-                <div class = "iphoneHorizontalActiveZone opacity"></div>
-                <div class = "iphoneHorizontalScreen opacity" ></div>
-
-            </div>
-                <div class = "leftBar bar"></div>
-                <div class = "rightBar bar"></div>
-            
-        </section>
-
-        <div class = "redLine"></div>
-
-    <section class = "services">
-        <a name = "services"></a>
-        <div class = "servicesHeading">
-            <h2 class = "ourServices">Our Services</h2>
-            <p class = "ourSrvicesText">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
-                Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
-                Fusce dapibus tellus ac cursus commodo, torto mairus condimentum nibh.</p>
+            <nav class = "header__menu" id="menu">
+                <ul>
+                    <li><a href="#slider">HOME</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#aboutus">ABOUT</a></li>
+                    <li><a href="#getAQuote">CONTACT</a></li>
+                </ul>
+            </nav>
         </div>
+        <div class="header__bottom"></div>
+    </header>
+    
+<!-- SLIDER -->
+    <section class = "slider" id="slider">
+        <id class="content" >
+            <div class="slider__mainZone" >
+                <div class = "leftBar bar"></div>
+                <di class="mainZone__image" id="some" >
+                    <div class = "image__vertical">
+                        <div class = "iphoneVertical"></div>
+                        <div class = "iphoneVerticalActiveScreen opacity"></div>
+                        <div class = "iphoneVerticalActiveZone opacity"></div>
+                    </div>
+                    <div class="image__horizontal">
+                        <div class = "iphoneHorizontal"></div>
+                        <div class = "iphoneHorizontalScreen opacity" ></div>
+                        <div class = "iphoneHorizontalActiveZone opacity"></div>
+                        
+                    </div>
+                </di>
+                <div class = "rightBar bar"></div>
+            </div>
+        
+    </section>
+    <div class="slider__bottom"></div>
+<!-- SERVICES -->
+    <section class = "services"  id = "services">
+        <h2>Our Services</h2>
+        <h5 class = "services__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia 
+            odio sem nec elit. Fusce dapibus tellus ac cursus commodo, torto mairus condimentum nibh.</h5>
+        <div class="services__flex">
 
-        <div class = "flexContainer">
-            <div class = "containerItem">
-                <img  class = "image"src = "../singolo/assets/images/pen.png" alt = "pen">
-                <div>
-                <h3 class = "flexMainText" >Custom Design</h3>
-                <p class = "flexText" >Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+            <div class="services__container">
+                <div class="services-image1 image"></div>
+                <div class="services-info">
+                    <h3>Custom Design</h3>
+                    <p class="services-littleText">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
                 </div>
             </div>
 
-            <div class = "containerItem">
-                <img  class = "image" src = "../singolo/assets/images/bulb.png" alt = "lamp">
-                <div>
-                <h3 class = "flexMainText" >Inovative Ideas</h3>
-                <p class = "flexText" >Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+            <div class="services__container">
+                <div class="services-image2  image"></div>
+                <div class="services-info">
+                    <h3>Inovative Ideas</h3>
+                    <p class="services-littleText">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+                </div>
+            </div>
+            
+            <div class="services__container">
+                <div class="services-image3  image"></div>
+                <div class="services-info">
+                    <h3>Love Is The Answer</h3>
+                    <p class="services-littleText">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                 </div>
             </div>
 
-            <div class = "containerItem">
-                <img  class = "image" src = "../singolo/assets/images/Heart.png" alt = "heart">
-                <div>
-                <h3 class = "flexMainText" >Love Is The Answer</h3>
-                <p class = "flexText" >Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+            <div class="services__container">
+                <div class="services-image4  image"></div>
+                <div class="services-info">
+                    <h3>Responsive Layout</h3>
+                    <p class="services-littleText">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
                 </div>
             </div>
 
-            <div class = "containerItem">
-                <img  class = "image" src = "../singolo/assets/images/Phone.png" alt = "phone">
-                <div>
-                <h3 class = "flexMainText" >Responsive Layout</h3>
-                <p class = "flexText" >Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
+            <div class="services__container">
+                <div class="services-image5  image"></div>
+                <div class="services-info">
+                    <h3>24 / 7 Support</h3>
+                    <p class="services-littleText">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .</p>
                 </div>
             </div>
 
-            <div class = "containerItem">
-                <img  class = "image" src = "../singolo/assets/images/Bubble.png" alt = "says">
-                <div>
-                <h3 class = "flexMainText" >24 / 7 Support</h3>
-                <p class = "flexText" >Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .</p>
+            <div class="services__container">
+                <div class="services-image6  image"></div>
+                <div class="services-info">
+                    <h3>Feel Like A Star</h3>
+                    <p class="services-littleText">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
                 </div>
             </div>
-
-            <div class = "containerItem">
-                <img  class = "image" src = "../singolo/assets/images/Star.png" alt = "star">
-                <div>
-                <h3 class = "flexMainText" >Feel Like A Star</h3>
-                <p class = "flexText" >Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
-                </div>
-            </div>
-
         </div>
     </section>
+    <div class="services__bottom"></div>
+<!-- PORTFOLIO -->
 
-    <div class = "lineWhite"></div>
-
-    <section class = "portfolio">
-        <a name = "portfolio"></a>
-        <div class = 'portfolioHeading'>
-            <h1 class = "portfolioLable">Portfolio</h1> 
-            <p class = "portfolioText">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia 
-                odio sem nec elit</p>
-            <ul class = "buttons flexContainer" id = "menu2">
-                <li><a class = "a1" href="#portfolio" > All </a></li>
-                <li><a class = "a2" href="#portfolio">Web Design</a></li>
-                <li><a class = "a3" href="#portfolio">Graphic Design</a></li>
-                <li><a class = "a4" href="#portfolio">Artwork</a></li>
+    <section class = "portfolio" id = "portfolio">
+        <h2>Portfolio</h2>
+        <h5 class = "portfolio__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit</h5>
+        <div class="portfolio__menu" id= "menu2">
+            <ul>
+                <li><p
+                    > All </p></li>
+                <li><p>Web Design</p></li>
+                <li><p>Graphic Design</p></li>
+                <li><p>Artwork</p></li>
             </ul>
         </div>
-
-        <div class = "imagesStack flexContainer">
+        <div class = "portfolio__flex">
             <div class="image1 img"></div>
             <div class="image2 img"></div>
             <div class="image3 img"></div>
@@ -133,128 +136,117 @@
             <div class="image12 img"></div>
         </div>
     </section>
-    <div class="darkLine"></div>
+    <div class="portfolio__bottom"></div>
+<!-- ABOUT US -->
+    <section class="aboutus"  id = "aboutus">
+            <h2>About Us</h2>
+            <h5 class="aboutus__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia 
+                odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</h5>
+        <div class="aboutus__adepts">
 
-    <section class="aboutUs">
-        <a name = "aboutUs"></a>
-        <div class = "aboutUsHeading">
-            <h2 class="aboutUsLable">About Us</h2>
-            <p class="aboutUsText">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, 
-                non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, 
-                tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-        </div>
-        <div class="adepts">
-
-            <div>
-                <div class = "fotoFace1"></div>
-                <h3 class = "name">Adam Jensen</h3>
-                <p class="aboutMe1">Quisque luctus, quam eget molestie commodo, lacus purus cursus pursus, 
+            <div class="aboutus__container">
+                <div class="aboutus_foto1 foto"></div>
+                <h3>Adam Jensen</h3>
+                <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus pursus, 
                     nec rutrum tellus dolor id lorem.</p>
-                <div class = "contactsAll">
-                    <div  class="fb"></div>
-                    <div class="google"></div>
-                    <div class="twitter"></div>
-                    <div class="linkedIn"></div>
+                <div class="aboutus__links">
+                    <div  class="fb social"></div>
+                    <div class="google social"></div>
+                    <div class="twitter social"></div>
+                    <div class="linkedIn social"></div>
                 </div>
             </div>
-           
-            <div>
-                <div class = "fotoFace2"></div>
-                <h3 class = "name">Desmond Miles</h3>
-                <p class="aboutMe2">Curabitur vestibulum eget mauris quis laoreet. Phasellus in  quam laorett, 
+
+            <div class="aboutus__container">
+                <div class="aboutus_foto2 foto"></div>
+                <h3>Desmond Miles</h3>
+                <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in  quam laorett, 
                     viverra lacus ut, ultrices velit.</p>
-                <div class = "contactsAll">
-                    <div  class="fb"></div>
-                    <div class="google"></div>
-                    <div class="twitter"></div>
-                    <div class="linkedIn"></div>
+                <div class="aboutus__links">
+                    <div  class="fb social"></div>
+                    <div class="google social"></div>
+                    <div class="twitter social"></div>
+                    <div class="linkedIn social"></div>
                 </div>
             </div>
-            
-            <div>
-                <div class = "fotoFace3"></div>
-                <h3 class = "name">Scolara Visari</h3>
-                <p class="aboutMe3">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et 
-                    conseqat felis. Quisque condimentum.</p>
-                <div class = "contactsAll">
-                    <div  class="fb"></div>
-                    <div class="google"></div>
-                    <div class="twitter"></div>
-                    <div class="linkedIn"></div>
+
+            <div class="aboutus__container">
+                <div class="aboutus_foto3 foto"></div>
+                <h3>Scolara Visari</h3>
+                <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et conseqat felis. Quisque condimentum.</p>
+                <div class="aboutus__links">
+                    <div  class="fb social"></div>
+                    <div class="google social"></div>
+                    <div class="twitter social"></div>
+                    <div class="linkedIn social"></div>
                 </div>
             </div>
         </div>
     </section>
-    <div class="whiteLine"></div>
+    <div class="aboutus__bottom"></div>
+<!-- CONTACT -->
+    <section class = "qote" id = "getAQuote">
+        <h4>Get a Quote</h4>
+        <p class = "qote__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio 
+            sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+        <div class="qote__grid">
+            <div class="qote__form">
+                <form method="POST">
+                    <input type="text" name="name" size="50" id="id1" class = "qote_inputs" placeholder="Name (Required)" required>
+                    <input type="email" name="email" size="50" id="id2" class = "qote_inputs" placeholder="Email (Required)" required>
+                    <input type="text" name="subject" placeholder="Subject" size="50" id="id3" class = "qote_inputs" maxlength="100">
+                    <textarea name="description" id="id4" class="inputsTextArea" placeholder="Describe your project in detail..." maxlength="400" rows="5"></textarea>
+                    <button type="submit" formmethod="POST" id = "button">SEND</button>
+                </form>
+            </div>
 
-    <section class = "getAQuote">
-        <a name = "getAQuote"></a>
-        <div>
-            <h1 class = 'getAQuoteLable'>Get a Quote</h1>
-            <p class = "getAQuoteText">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
-                Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
-                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-        </div>
-        <div class = "grid">
-            <form method="POST">
-                <input type="text" name="name" size="50" id="id1" class = "inputs" placeholder="Name (Required)" required>
-                <input type="email" name="email" size="50" id="id2" class = "inputs" placeholder="Email (Required)" required>
-                <input type="text" name="subject" placeholder="Subject" size="50" id="id3" class = "inputs" maxlength="100">
-                <textarea name="description" id="id4" class="inputsTextArea" placeholder="Describe your project in detail..." maxlength="400" rows="5"></textarea>
-                <button type="submit" formmethod="POST" id = "button">Submit</button>
-                
-            </form>
-            <div class = "contactInfirmation">
-                <h2 class = "contactHead">Contact Information</h2>
-                <p class = "contactText">Quisque hendrerit purus dapibus, ornare nibh vitae, viver-ra nibh. 
-                    Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor 
-                    luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
+            <div class="qote__contactInfo">
+                <p class = "qote-contactHeader">Contact Information</p>
+                <p class = "qote_text">Quisque hendrerit purus dapibus, ornare nibh vitae, viver-ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc 
+                    et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
                 <ul class = "contactsTable">
                     <li>
-                        <div class = "location"></div>
-                        <a href="#">Elm St. 14/05 Lost City</a>
+                        <a href="#"><div class="location little_links"></div>Elm St. 14/05 Lost City</a>
                     </li>
                     <li>
-                        <div class = "phone"></div>
-                        <a href="tel:03528 331 8635">03528 331 86 35</a>
+                        <a href="tel:03528 331 8635"> <div class="phone little_links"></div>03528 331 86 35</a>
                     </li>
-                    <li class = "string3" >
-                        <div class = "mail"></div>
-                        <a href="email:info@singolo.com">info@singolo.com</a>
+                    <li>
+                        <a href="mailto:info@singolo.com"> <div class="mail little_links"></div>info@singolo.com</a>
                     </li>
-                    
                 </ul>
-                
             </div>
         </div>
-   </section>
-   <div class = "messageBlock hiden" id = "messageBlock">
-       <div class = "message">
-            <p>Письмо отправлено</p>
+    </section>
+    <div class = "qote__bottom"></div>
+<!-- MESSAGE BLOCK -->
+    <div class = "messageBlock hiden" id = "messageBlock">
+        <div class = "message">
+                <p>Письмо отправлено</p>
+                <br>
+                <br>
+                <p><span id = "topic"></span></p>
+                <br>
+            <p><span id = "result"></span></p>
             <br>
-            <br>
-            <p><span id = "topic"></span></p>
-            <br>
-           <p><span id = "result"></span></p>
-           <br>
-           <button id= "closeButton"> OK</button>
-       </div>
-   </div>
-    <div class = "redLineBottom"></div>
-
-   <footer class = "footerSide">
-        <div class = "gridFooter">
-            <p class = "footerLable">&copy; Copyright 2013 by PSDchat.com</p>
-            <div class = "contactsAllFooter">
-                <div  class="fb"></div>
-                <div class="google"></div>
-                <div class="twitter"></div>
-                <div class="linkedIn"></div>
+            <button id= "closeButton"> OK</button>
+        </div>
+    </div>
+<!-- FOOTER -->
+    <footer class = "footer">
+        <div class = "footer__grid">
+            <div class="footer__lable">
+                <p>&copy; Copyright 2013 by PSDchat.com</p>
+            </div>
+            <div class= "footer___empty"></div>
+            <div class = "footer__contacts">
+                <div  class="fb social"></div>
+                <div class="google social"></div>
+                <div class="twitter social"></div>
+                <div class="linkedIn social"></div>
             </div>
         </div>
-   </footer>
-  
-<script src="script.js"></script>
-    </body>
-   
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>

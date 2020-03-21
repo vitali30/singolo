@@ -1,112 +1,154 @@
+
+/* ALL */
 @font-face{
     font-family:Lato;
     font-style:normal;
     font-weight:500;
     src:url(../singolo/assets/fonts/Lato/Lato-Light.ttf) 
-    }
+}
  @font-face{
     font-family:Lato-bold;
     font-style:normal;
     font-weight:500;
     src:url(../singolo/assets/fonts/Lato/Lato-Black.ttf) 
-    }   
-
-body{
+}   
+*{
     margin: 0;
+    padding: 0;
+    
+}
+html, body{
     width: 1020px;
+    scroll-behavior: smooth;
 }
-.logotipeDarkLine{
-    background-color: #2d303a;
-    height: 89px;
+.content{
+    overflow-x: hidden;
+    
+    height: 100%;
+    min-height: 100%;
 }
-.singoloLable{
+h1{
     font-size: 24px;
     line-height: 6px;
     color: #ffffff;
     font-family: "Lato";
-    position: absolute;
-    margin: 41px 0 0 40px;
-    text-transform: uppercase;
-    letter-spacing: 0.1px;
+    /* padding: 40px 40px; */
+}
+
+h2{
+    font-family: "Lato-bold";
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    color: #666D89;
+    padding: 1rem;
+    padding: 59px 0 0 40px;
+}
+h3{
+    font-family: "Lato-bold";
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 18px;
+    color: #666D89;
+}
+h4{
+    font-family: "Lato-bold";
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    color: #F0D8D9;
+    padding: 60px 0 0 39px;
+}
+h5{
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767E9E;
+    padding: 20px 40px 0 40px;
+}
+p{
+    text-align: justify;
+}
+.opacity{
+    opacity: 0;
+}
+/* HEADER */
+header{
+    position: fixed;
+    width: 1020px;
+    padding: 0;
+}
+.header__bottom{
+    height: 6px;
+    background-color: #323746;
     
 }
-.star{
+.header{
+    background-color: #2D303A;
+    height: 89px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+.header__menu{
+    margin: 0px -15px -7px 0px;
+   
+}
+.header__star{
     color: #f06c64;
 }
-.navigationBar{
-    margin: 0 20px 0 400px;
-}
-.flexContainer{
-    display: flex;
-    position: absolute;
-}
-.navigationBar ul{    
-    margin: 40px 0 0 154px;
-}
-li{
+.header__menu li{
     list-style-type: none;
 }
-.navigationBar .headerButton{
+.header__menu a{
     text-decoration: none;
     color: #ffffff;
     text-align: center;
     margin: 15px;
-    text-transform: uppercase;
     font-size: 12px;
     font-family: "Lato";
     font-weight: 700;
     letter-spacing: -0.1px;
 }
-/* .navigationBar a:hover{
-    color: #f06c64;
-} */
-
-.headerButton.active{
-    
+.header__menu a.active{
     color: #f06c64;
 }
-.headerButton:not(.active):hover{
+.header__menu a:not(.active):hover{
     cursor: pointer;
     color: #f06c64;
-} 
-
-
-
-.lineDark{
-    height:  6px;
-    background-color: #323746;
 }
-.sliderRedBody{
+.header__menu ul{
+    display: flex;
+}
+/* SLIDER */
+.slider{
+    padding: 95px 0 0 0 ;
+    width: 100%;
+
     height: 594px;
-    background-color: #f06c64;
+    background-color: #F06C64;
 }
-.iphoneVertical{
-    width: 215px;
-    height: 459px;
-    position: absolute;
-    margin: 52px 0 0 112px;
-    box-shadow: 25px 25px 0 #ce5d56;
-    border-radius: 28px;
-    background-image: url(../singolo/assets/images/verticalPhone.png);
-    background-size: 215px 459px
+.slider__bottom{
+    width: 100%;
+    height: 6px;
+    background-color: #EA676B;
 }
-.iphoneHorizontal{
-    width: 458px;
-    height: 215px;
-    position: absolute;
-    margin: 174px 0 0 425px;
-    box-shadow: 26px 25px 0px 0px #ce5d56;
-    border-radius: 28px;
-    background-image: url(../singolo/assets/images/HorizontalPhone.png);
-    background-size: 458px 215px;
+.slider__mainZone{
+    display: grid;
+    grid-template-columns: 9% 81% 10%;
+    height: 101%;
+   
 }
-.leftBar{
+.bar{
     width: 40px;
     height: 40px;
-    position: absolute;
-    margin: 274px 0 0 30px;
+    align-self: center;
+    justify-self: center;
     cursor: pointer;
-    transition: all 0.5s;
+}
+.leftBar{
     background: url(../singolo/assets/images/chev.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -117,12 +159,6 @@ li{
     background-position: center;
 }
 .rightBar{
-    width: 40px;
-    height: 40px;
-    margin: 274px 0 0 952px;
-    position: absolute;
-    cursor: pointer;
-    transition: all 0.5s;
     background: url(../singolo/assets/images/right.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -132,103 +168,161 @@ li{
     background-repeat: no-repeat;
     background-position: center;
 }
-.redLine{
-    height: 14px;
-    background-color: #ea676b;
-}
-.services{
-    height: 494px;
-    background-color: #f2f2f2;
-}
-.servicesHeading{
-    margin: 43px 0 0 40px;
-    position: absolute;
-}
-
-.ourServices{
-    font-size: 30px;
-    line-height: 18px;
-    color: #666d89;
-    font-family: "Lato-bold";
-    letter-spacing: -0.2px;
-}
-.ourSrvicesText{
-    width: 940px;
-    font-size: 18px;
-    line-height: 30px;
-    color: #767e9e;
-    font-family: "Lato";
-    margin: 27px 0;    
-    text-align: justify;
-}
-.services .flexContainer{
-    margin: 219px 0 0 40px;
-    flex-wrap: wrap;
-    width: 1020px;
-}
-.containerItem{
+.mainZone__image{
     display: flex;
-    height: 123px;
-    width: 319px;
+   transition: all ease 1s;
 }
-.flexMainText{
-    font-size: 18px;
-    line-height: 18px;
-    color: #666d89;
-    font-family: "Lato-bold";
-    margin: -1px 0 0px 18px;
-    letter-spacing: -0.1px;
+.image__vertical{
+    width: 40%;
+    height: 100%;
 }
-.flexText{
-    width: 217px;
-    height: 128px;
+.image__horizontal{
+    width: 60%;
+    height: 100%;
+}
+.iphoneVertical{
+    width: 65%;
+    height: 77%;
+    margin: 16% 0rem 0rem 6%;
+    box-shadow: 25% 25% 0 #ce5d56;
+    border-radius: 1rem;
+    background-image: url(../singolo/assets/images/verticalPhone.png);
+    background-size: 100% 100%;
+}
+.iphoneVerticalActiveScreen{
+    width: 57%;
+    height: 59.3%;
+    background-color: #000000;
+    margin: -124% 0rem 0rem 10%;
+}
+.iphoneVerticalActiveZone{
+    width: 14%;
+    height: 7%;
+    background-color: #968989;
+    margin: 2% 0 0 32%;
+    border-radius: 50%;
+}
+.iphoneHorizontal{
+    width: 92%;
+    height: 35%;
+    margin: 36% 0rem 0rem 1%;
+    box-shadow: 26px 25px 0px 0px #ce5d56;
+    border-radius: 1rem;
+    background-image: url(../singolo/assets/images/HorizontalPhone.png);
+    background-size: 100%;
+}
+.iphoneHorizontalActiveZone{
+    width: 9%;
+    height: 7%;
+    background-color: #968989;
+    margin: -23.5% 0rem 0rem 2.5%;
+    border-radius: 50%;
+}
+.iphoneHorizontalScreen{
+    width: 67%;
+    height: 32.2%;
+    background-color: #000000;
+    margin: -39.6% 0rem 0rem 13%;
+}
+.slide2{
+    width: 100%;
+    height: 101%;
+    margin: 0% 0 0 0%;
+    background-image: url(../singolo/assets/images/slide-2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+}
+.leftBar2{
+    padding: 0% 0 0 9%;
+}
+.rightBar2{
+    padding: 0% 0 0 173%;;
+}
+/* SERVICES */
+.services{
+    scroll-margin-top: 95px;
+    width: 100%;
+    height: 494px;
+    background-color: #F2F2F2;
+}
+.services__bottom{
+    width: 100%;
+    height: 6px;
+    background-color: #FFFFFF;
+}
+.services__flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2.6%;
+    width: 93.4%;
+    padding-right: 3%;
+    padding-left: 37px;
+}
+.services__container{
+    display: flex;
+    width: 32%;
+    height: 25%;
+    align-items: center;
+    margin: 1% 0% 4% 0%;
+}
+.services-info{
+    width: 220px;
+    height: 77px;
+    padding-left: 20px;
+}
+.services-info h3{
+    padding-top: 8px;
+}
+.services-info p{
+    font-family: "Lato";
     font-size: 12px;
     line-height: 22px;
-    color: #767e9e;
-    font-family: "Lato";
-    font-weight: 700;
-    margin: 10px 0 0 19px;
-    word-spacing: 1px;
     text-align: justify;
-    word-wrap: break-word
+    color: #767E9E;
+    padding-top: 12px;
 }
 .image{
-    margin-bottom: auto;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.5s;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.lineWhite{
-    width: 1020px;
-    height: 6px;
-    background-color: #ffffff;
+.services-image1{
+    background-image: url(../singolo/assets/images/pen.png);
 }
-.portfolio{
-    width: 1020px;
-    height: 863px;
-    background-color: #2d303a;
+.services-image2{
+    background-image: url(../singolo/assets/images/bulb.png);
+}
+.services-image3{
+    background-image: url(../singolo/assets/images/Heart.png);
+}
+.services-image4{
+    background-image: url(../singolo/assets/images/Phone.png);
+}
+.services-image5{
+    background-image: url(../singolo/assets/images/Bubble.png);
+}
+.services-image6{
+    background-image: url(../singolo/assets/images/Star.png);
 }
 
-.portfolioLable{
-    font-size: 30px;
-    line-height: 18px;
-    color: #666d89;
-    font-family: "Lato-bold";
-    position: absolute;
-    margin: 68px 0 0 40px;
-    letter-spacing: -0.1px;
+/* PORTFOLIO */
+.portfolio{
+    width: 100%;
+    height: 864px;
+    background-color: #2D303A;
+    scroll-margin-top: 95px;
 }
-.portfolioText{
-    font-size: 18px;
-    line-height: 30px;
-    color: #767e9e;
-    font-family: "Lato";
-    margin: 113px 0 0 40px;
-    position: absolute;
+.portfolio__bottom{
+    width: 100%;
+    height: 6px;
+    background-color: #323746;
 }
-.buttons{
-    margin: 155px 0 0 40px;
-    padding: 0;
-    
-}
-.buttons a{
+.portfolio__menu li{
     border-radius: 5px;
     background-color: #0f0f0f;
     border: 1px solid #666d89;
@@ -237,350 +331,197 @@ li{
     font-size: 12px;
     font-family: "Lato";
     font-weight: 700;
-    
     line-height: 22px;
     color: #767e9e;
+    list-style-type: none;
+    margin: 0 15px 0 0;
 }
- 
-.buttons a.active{
+.portfolio__menu li.active{
     color: #c5c5c5;
     background-color: #2d303a;
 }
-.buttons a:not(.active):hover{
+.portfolio__menu li:not(.active):hover{
     color: #c5c5c5;
     background-color: #2d303a;
 }
-
-
-.a1{
-    padding: 3px 7px 2px 8px;
+.portfolio__menu ul{
+    display: flex;
 }
-.a2{
-    padding: 3px 6px 2px 8px;
+.portfolio__menu{
+    margin: 8px 40px;
 }
-.a3{
-    padding: 3px 6px 2px 7px;
+.portfolio__menu p{
+   margin: 0 5px;
 }
-.a4{
-    padding: 3px 6px 2px 8px;
-}
-.imagesStack{
-   margin: 195px 0 0 40px;
+.portfolio__flex{
+    display: flex;
     flex-wrap: wrap;
-    width: 950px;
-    height: 610px;
-}  
-.img:nth-child(n+13) {
-    display: none;
-    width: 0;
-    height: 0;
+    width: 95%;
+    height: 72%;
+    margin: 0px 0 0 28px;
 }
 .img{
-    margin: 0px 10px 0px 5px;
-    
-}
-.image1{
-    width: 220px;
-    height: 187px;
-    background-image: url(../singolo/assets/images/Project\ \(11\).png);
-    background-position-x: -8px;
-    background-position-y: -11px;
-    background-size: 238px 238px;
-}
-.image2{
-    width: 220px;
-    height: 187px;
-    background-image: url(../singolo/assets/images/Project\ \(8\).png);
-    background-position-x: -82px;
-    background-position-y: -43px;
-    background-size: 364px 273px;
-}
-.image3{
-    width: 220px;
-    height: 187px;
-    background-image: url(../singolo/assets/images/Layer\ 9.png);
-    background-position-x: -11px;
-    background-position-y: -1px;
-    background-size: 250px 304px;
-}
-.image4{
-    width: 220px;
-    height: 187px;
-    background-image: url(../singolo/assets/images/Project\ \(1\).png);
-    background-position-x: -24px;
-    background-position-y: -2px;
-    background-size: 262px 196px;
-}
-.image5{
-    width: 220px;
-    height: 187px;
-    background-image: url(../singolo/assets/images/Project\ \(10\).png);
-    background-position-x: -10px;
-    background-position-y: -16px;
-    background-size: 242px 276px;
-}
-.image6{
-    width: 220px;
-    height: 187px;
-    background-image: url(../singolo/assets/images/Project\ \(7\).png);
-    background-position-x: -16px;
-    background-position-y: -4px;
-    background-size: 258px 194px;
-}
-.image7{
-    width: 220px;
-    height: 187px;
-    background-image: url(../singolo/assets/images/Layer\ 11.png);
-    background-position-x: -31px;
-    background-position-y: -39px;
-    background-size: 372px 372px;
-}
-.image8{
-    width: 220px;
-    height: 187px;
-    background-image: url(../singolo/assets/images/Layer\ 8.png);
-    background-position-x: -24px;
-    background-position-y: -32px;
-    background-size: 278px 278px;
-}
-.image9{
-    width: 220px;
-    height: 187px;
-    background-image: url(../singolo/assets/images/Project\ \(9\).png);
-    background-position-x: -16px;
-    background-position-y: -2px;
-    background-size: 254px 191px;
-}
-.image10{
-    width: 220px;
-    height: 187px;
-    background-image: url(../singolo/assets/images/Project\ \(3\).png);
-    background-position-x: -141px;
-    background-position-y: -113px;
-    background-size: 474px 663px;
-}
-.image11{
-    width: 220px;
-    height: 187px;
-    background-image: url(../singolo/assets/images/Project\ \(2\).png);
-    background-position-x: -144px;
-    background-position-y: 238px;
-    background-size: 414px 413px;
-}
-.image12{
-    width: 220px;
-    height: 187px;
-    background-image: url(../singolo/assets/images/Project.png);
-    background-position-x: -36px;
-    background-position-y: 365px;
-    background-size: 296px 425px;
-}
-.darkLine{
-    width: 1020px;
-    height: 6px;
-    background-color: #323746;
-}
-.aboutUs{
-    width: 1020px;
-    height: 728px;
-    background-color: #f2f2f2;
-}
-.aboutUsHeading{
-    margin: 43px 0px 0px 40px;
-    position: absolute;
-}
-.aboutUsLable{
-    font-size: 30px;
-    line-height: 18px;
-    color: #666d89;
-    font-family: "Lato-bold";
-    word-spacing: -0.5px
-}
-.aboutUsText{
-    width: 950px;
-    font-size: 18px;
-    line-height: 30px;
-    color: #767e9e;
-    font-family: "Lato";
-    margin: 27px 0px 0px 0px;
-    word-spacing: 1.05px;
-}
-.adepts{
-    display: flex;
-    position: absolute;
-    margin: 218px 0 0 40px;
-    flex-wrap: wrap;
-    width: 1020px;
-    height: 155px;
-    position: absolute;
-}
-.fotoFace1{
-    width: 300px;
-    height: 300px;
-    background-image: url(../singolo/assets/images/photo\ \(2\).png);
-    margin: 0px 19px 0 0px;
-}
-.fotoFace2{
-    width: 300px;
-    height: 300px;
-    background-image: url(../singolo/assets/images/photo\ \(1\).png);
-    margin: 0px 21px 0 0px;
-}
-.fotoFace3{
-    width: 300px;
-    height: 300px;
-    background-image: url(../singolo/assets/images/photo.png);
-}
-.name{
-    width: 300px;
-    height: 30px;
-    font-size: 18px;
-    line-height: 18px;
-    color: #666d89;
-    font-family: "Lato-bold";
-    margin: 17px 0px 0 -1px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-
-}
-.aboutMe1{
-    width: 300px;
-    font-size: 12px;
-    color: #767e9e;
-    font-family: "Lato";
-    font-weight: 600;
-    margin: -2px 0px 0 -1px;
-    word-spacing: 0.7px;
-    line-height: 180%;
-}
-
-.aboutMe2{
-    width: 300px;
-    font-size: 12px;
-    color: #767e9e;
-    font-family: "Lato";
-    font-weight: 600;
-    margin: -2px 0px 0 1px;
-    word-spacing: 2.4px;
-    line-height: 180%;
-}
-.aboutMe3{
-    width: 300px;
-    font-size: 12px;
-    color: #767e9e;
-    font-family: "Lato";
-    font-weight: 600;
-    margin: -2px 0px 0 -1px;
-    word-spacing: 1.7px;
-    line-height: 180%;
-}
-.fb{
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    position: absolute;
-    margin: 20px 6px 0 -3px;
+    width: 22.71%;
+    height: 30.07%;
     background-repeat: no-repeat;
     background-position: center;
+    margin: 10px;
+}
+.image1{
+    background-image: url(../singolo/assets/images/portfolio/portfolio-1.png);
+}
+.image2{
+    background-image: url(../singolo/assets/images/portfolio/portfolio-2.png);
+}
+.image3{
+    background-image: url(../singolo/assets/images/portfolio/portfolio-3.png);
+}
+.image4{
+    background-image: url(../singolo/assets/images/portfolio/portfolio-4.png);
+}
+.image5{
+    background-image: url(../singolo/assets/images/portfolio/portfolio-5.png);
+}
+.image6{
+    background-image: url(../singolo/assets/images/portfolio/portfolio-6.png);
+}
+.image7{
+    background-image: url(../singolo/assets/images/portfolio/portfolio-7.png);
+}
+.image8{
+    background-image: url(../singolo/assets/images/portfolio/portfolio-8.png);
+}
+.image9{
+    background-image: url(../singolo/assets/images/portfolio/portfolio-9.png);
+}
+.image10{
+    background-image: url(../singolo/assets/images/portfolio/portfolio-10.png);
+}
+.image11{
+    background-image: url(../singolo/assets/images/portfolio/portfolio-11.png);
+}
+.image12{
+    background-image: url(../singolo/assets/images/portfolio/portfolio-12.png);
+}
+.bordered{
+    border: 5px solid #F06C64;
+    width: 210px;
+    height: 177px;
+}
+/* ABOUT US */
+.aboutus{
+    width: 100%;
+    height: 727px;
+    background-color: #F2F2F2;
+    scroll-margin-top: 95px;
+}
+.aboutus__bottom{
+    width: 100%;
+    height: 6px;
+    background-color: #FFFFFF;
+}
+.aboutus__adepts{
+    display: grid;
+    grid-template-columns: 34% 34% 34%;
+    width: 92%;
+    height: 65%;
+    padding: 40px 40px 0 40px;
+}
+.foto{
+    width: 94%;
+    height: 64%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.aboutus_foto1{
+    background-image: url(../singolo/assets/images/photo\ \(2\).png);
+}
+.aboutus_foto2{
+    background-image: url(../singolo/assets/images/photo\ \(1\).png);
+}
+.aboutus_foto3{
+    background-image: url(../singolo/assets/images/photo.png);
+}
+.aboutus__container h3{
+    margin: 1.1rem 0 0 0;
+}
+.aboutus__container p{
+    font-family: "Lato";
+    font-size: 12px;
+    line-height: 22px;
+    text-align: justify;
+    color: #767E9E;
+    margin: 3% 0 0 0;
+    text-align: justify;
+}
+.aboutus__links{
+    height: 33px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 1.4rem 0 0 0;
+}
+.social{
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 7px 0 0;
+}
+.fb{
     background-image: url(../singolo/assets/images/Facebook.png);
 }
 .fb:hover{
     background-image: url(../singolo/assets/images/facebook\ \(1\).png);
-    background-repeat: no-repeat;
-    background-position: center;
-
 }
 .google{
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    position: absolute;
-    margin: 20px 0px 0 37px;
-    background-repeat: no-repeat;
-    background-position: center;
     background-image: url(../singolo/assets/images/Google.png);
 }
 .google:hover{
     background-image: url(../singolo/assets/images/google+.png);
 }
 .twitter{
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    position: absolute;
-    margin: 20px 0px 0 77px;
-    background-repeat: no-repeat;
-    background-position: center;
     background-image: url(../singolo/assets/images/Twitter.png);
 }
 .twitter:hover{
     background-image: url(../singolo/assets/images/twitter\ \(1\).png);
 }
 .linkedIn{
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    position: absolute;
-    margin: 20px 0px 0 117px;
-    background-repeat: no-repeat;
-    background-position: center;
     background-image: url(../singolo/assets/images/LinkedIn.png);
 }
 .linkedIn:hover{
     background-image: url(../singolo/assets/images/linkedin\ \(1\).png);
 }
-.whiteLine{
-    width: 1020px;
-    height: 6px;
-    background-color: #ffffff;
-}
-body{
-    margin: 0;
-    width: 1020px;
-}
-.getAQuote{
-    width: 1020px;
+/* QOTE */
+.qote{
+    width: 100%;
     height: 648px;
-    background-color: #f06c64;
+    background-color: #F06C64;
 }
-.redLine{
-    width: 1020px;
+.qote__bottom{
+    width: 100%;
     height: 6px;
-    background-color: #ea676b;
+    background-color: #EA676B;
 }
-.getAQuoteLable{
-    font-size: 30px;
-    line-height: 18px;
-    color: #f0d8d9;
-    font-family: "Lato-bold";
-    font-weight: 600;
-    text-align: left;
-    margin: 68px 0px 0px 40px;
-    display: inline-block;
-    letter-spacing: -0.1px;
-    word-spacing: -0.5px;
-}
-.getAQuoteText{
-    width: 940px;
-    height: 57px;
+.qote__text{
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 300;
     font-size: 18px;
     line-height: 30px;
-    color: #f0d8d9;
-    font-family: "Lato";
-    font-weight: 300;
-    text-align: justify;
-    margin: 20px 0px 0px 40px;
-    display: inline-block;
+    color: #F0D8D9;
+    margin: 14px 40px 0 40px;
 }
-.grid{
+.qote__grid{
     display: grid;
-    grid-template-columns: 630px 390px;
-    margin: 47px 0px 0px 40px;
+    grid-template-columns: 69.7% 32.7%;
+    width: 90%;
+    height: 60%;
+    padding: 3rem 0 0 40px;
 }
-.inputs{
+.qote_inputs{
     cursor: pointer;
-    width: 604px;
+    width: 94.6%;
     height: 38px;
     border-radius: 5px;
     border: 0px solid #d6564f;
@@ -589,16 +530,14 @@ body{
     line-height: 22px;
     color: #f48c8f;
     font-family: "Lato";
-    font-weight: 400;
-    text-align: left;
     margin: 0px 0px 16px 0px;
     padding: 0px 0px 0px 15px;
     letter-spacing: 0.1px;
 }
 .inputsTextArea{
     cursor: pointer;
-    width: 604px;
-    height: 195px;
+    width: 94.6%;
+    height: 152px;
     border-radius: 5px;
     border: 0px solid #d6564f;
     background-color: #d6564f;
@@ -606,180 +545,90 @@ body{
     line-height: 22px;
     color: #f48c8f;
     font-family: "Lato";
-    font-weight: 400;
     flex-wrap: wrap;
     padding: 7px 0px 0px 15px;
     resize: none;
     letter-spacing: 0.1px;
     word-spacing: 0px;
-    }
-::-webkit-input-placeholder { 
-    color: #f48c8f; 
 }
-.contactText{
-    width: 299px;
-    height: 92px;
-    font-size: 12px;
-    line-height: 22px;
-    color: #f0d8d9;
+#button{
+    width: 136px;
+    height: 38px;
+    background: #FBC65F;
+    border: 5px solid #FBC65F;
+    border-radius: 5px;
+    margin: 10px 0 0 0px;
     font-family: "Lato";
-    font-weight: 400;
-    text-align: justify;
-    margin: 10px 0px 0px 10px;
-    word-wrap: break-word;
-    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #886A30;
 }
-.contactHead{
+.qote-contactHeader{
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 900;
     font-size: 18px;
     line-height: 18px;
-    color: #f0d8d9;
-    font-family: "Lato";
-    font-weight: 900;
-    text-align: left;
-    margin: 0px 0px 0px 10px;
-    letter-spacing: 0.5px;
-    word-spacing: 0px;
+    color: #F0D8D9;
 }
-.contactsTable{
-    margin: 16px 0px 0px 6px;
-    padding: 0;
-}
-.contactsTable li{
-    list-style-type: none;
-    display: flex;
-    height: 21px;
-}
-.string3{
-    margin: 3px 0px 0px 0px;
-}
-.contactsTable a{
+.qote_text{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
     font-size: 12px;
     line-height: 22px;
-    color: #f0d8d9;
-    font-family: "Lato";
-    font-weight: 400;
-    text-align: left;
-    margin: 0px 0px 0px 7px;
-    cursor: pointer;
+    text-align: justify;
+    color: #F0D8D9;
+    margin-top: 8px;
+
+}
+.contactsTable{
+    margin-top: 22px;
+}
+.contactsTable li{
+    list-style: none;
+}
+.contactsTable a{
+    display: flex;
     text-decoration: none;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: justify;
+    color: #F0D8D9;
+}
+.little_links{
+    margin-right: 3px;
+    margin-left: 2px;
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 20px;
+    height: 20px;
 }
 .location{
     background-image: url(../singolo/assets/images/location.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 20px;
-    height: 20px;
 }
 .location:hover{
     background-image: url(../singolo/assets/images/location\ \(1\).png);
 }
 .phone{
     background-image: url(../singolo/assets/images/phone\ \(1\).png);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 20px;
-    height: 20px;
 }
 .phone:hover{
     background-image: url(../singolo/assets/images/phone\ \(2\).png);
 }
 .mail{
     background-image: url(../singolo/assets/images/mail.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 20px;
-    height: 20px;
 }
 .mail:hover{
     background-image: url(../singolo/assets/images/mail\ \(1\).png);
 }
-.contactsList:hover{
-    color: #000000;
-}
-.submit{
-    margin: 0px 0px 0px 7px;
-}
-.redLineBottom{
-    width: 1020px;
-    height: 6px;
-    background-color: #ea676b;  
-}
-
-.footerSide{
-    width: 1020px;
-    height: 76px;
-    background-color: #2d303a;
-    display: inline-block;
-}
-.footerLable{
-    font-size: 12px;
-    line-height: 30px;
-    color: #666d89;
-    font-family: "Lato";
-    font-weight: 300;
-    text-align: left;
-    display: inline-block;
-    margin: 23px 0px 0px 42px;
-    word-spacing: 0.8px;
-}
-.gridFooter{
-    display: grid;
-    grid-template-columns: 827px 190px;
-}
-.contactsAllFooter{
-    margin: -2px 0px 0px 0px;
-}
-
-.slide2{
-    position: absolute;
-    background-color: #482fb8;
-}
-.iphoneVerticalActiveScreen{
-    width: 189px;
-    height: 333px;
-    background-color: #000000;
-    position: absolute;
-    margin: 118px 0 0 126px;
-}
-.opacity{
-    opacity: 0;
-}
-.iphoneVerticalActiveZone{
-    width: 47px;
-    height: 43px;
-    background-color: #968989;
-    position: absolute;
-    margin: 460px 0 0 197px;
-    border-radius: 34px;
-
-}
-
-.iphoneHorizontalActiveZone{
-    width: 47px;
-    height: 43px;
-    background-color: #968989;
-    position: absolute;
-    margin: 261px 0 0 430px;
-    border-radius: 34px;
-}
-.iphoneHorizontalScreen{
-    width: 333px;
-    height: 188px;
-    background-color: #000000;
-    position: absolute;
-    margin: 188px 0 0 485px;
-
-}
-
-
-
-
-
-.bordered{
-    border: 5px solid #F06C64;
-    width: 210px;
-    height: 177px;
-}
+/* MESAGE BLOCK */
 .messageBlock{
     position: fixed;
     width: 100%;
@@ -787,39 +636,87 @@ body{
     top: 0;
     left: 0;
     background: #0008;
-    
-} 
+}
 .hiden{
     display: none;
 }
 .message{
-    background: white;
+    background: #F0D8D9;
     position: absolute;
-    top: 35%;
-    left: 0%;
-    border: 2PX solid black;
+    top: 20%;
+    left: 5%;
+    border: 1PX solid black;
     text-align: center;
-    border-radius: 30px ;
+    border-radius: 15px;
+    /* width: 90%;
+    height: 60%; */
+    max-width: 75vw;
 }
-
-
 .message p{
     font-family: "Lato";
     font-size: 18px;
-    color: rgb(99, 102, 105);
-    width: 1020px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 10px 0;
+    color: rgb(33, 33, 34);
+    width: 90%;
+    padding: 1% 0;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 5% 5%;
 }
 #closeButton{
-    width: 200px;
-    height: 49px;
+    width: 25vw;
+    height: 5vw;
     font-family: "Lato-bolt";
     font-size: 32px;
-    color: rgb(46, 50, 54);
-  
-    border-radius: 10px ;
+    color: #2e2c2c;
+    /* margin-top: 30%; */
+    border-radius: 10px;
+    padding: 0% 0 -11% 0;
+    margin-bottom: 2vw;
+    background-color: #f48c8f;
 
+}
+/* FOOTER */
+.footer{
+    width: 100%;
+    height: 76px;
+    background-color: #2D303A;
+}
+.footer__grid{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns:27% 54% 17%;
+}
+.footer__lable{
+    align-items: center;
+    align-self: center;
+    margin-left: 40px;
+}
+.footer__lable p{
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 18px;
+    color: #666D89;
+}
+.footer__contacts{
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+@media (max-width: 1020px) {
+    /* header{
+        width: 1020px;
+    } */
+    html, body{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+    .slider{
+        height: 56.9vw;
+    }
+    
 }

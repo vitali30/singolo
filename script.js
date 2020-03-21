@@ -1,22 +1,53 @@
-const MENU = document.getElementById('menu');
+const MENU = document.getElementById("menu");
 
-
-const slides = [`<div class = "iphoneVertical"></div>
-<div class = "iphoneHorizontal"></div>
-<div class = "iphoneVerticalActiveScreen opacity"></div>
-<div class = "iphoneVerticalActiveZone opacity"></div>
-<div class = "iphoneHorizontalActiveZone opacity"></div>
-<div class = "iphoneHorizontalScreen opacity" ></div>`
-  , `<img class = "slide2" src="../singolo/assets/images/slide-2.svg" alt="iPhone Vertical">`
-]
-
-let some = document.querySelector('#some');
 
 
 MENU.addEventListener('click', (event)=>{
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
     event.target.classList.add('active');
 });
+// ---------------------------------------
+
+const menu = document.querySelector("nav ul");
+const menuLinks = document.querySelectorAll("nav ul li a");
+
+document.addEventListener("scroll", activateLink);
+window.onload = activateLink();
+
+function activateLink(event) {
+  const positionY = window.scrollY;// нужно отслеживать текущее положение экрана
+  const anchors = document.querySelectorAll('[id]');// создаем массив со всеми id (нас интересуют секции, именно так мы можем их перебрать)
+
+  anchors.forEach( anchor => {//и для каждого id  проверяем условие
+      if (anchor.offsetTop - 89 <= positionY && //верхнее значение секции с якорем меньше текущего положения экрана
+         (anchor.offsetTop + anchor.offsetHeight) - 89 > positionY) {// верхнее значение секции с якорем плюс высота секции больше текущего положения экрана
+        menuLinks.forEach( link => {// проверяем все элементы обьекта menuLinks 
+          link.classList.remove("active");// со всех снимаем класс active
+          if(anchor.getAttribute("id") === link.getAttribute("href").substring(1)) { // и каждый проверяем на соответствие с id  активной секции
+            link.classList.add("active");// если совпали вешаем класс active
+          }
+        });
+      }
+    });
+};
+  
+// ------------------------------------
+
+const slides = [`
+                    <div class = "image__vertical">
+                        <div class = "iphoneVertical"></div>
+                        <div class = "iphoneVerticalActiveScreen opacity"></div>
+                        <div class = "iphoneVerticalActiveZone opacity"></div>
+                    </div>
+                    <div class="image__horizontal">
+                        <div class = "iphoneHorizontal"></div>
+                        <div class = "iphoneHorizontalScreen opacity" ></div>
+                        <div class = "iphoneHorizontalActiveZone opacity"></div>
+                        
+                    </div>`, 
+  `<div></div>`
+]
+
 
 function activeScreen() {
   const activeVertical = document.querySelector('.iphoneVerticalActiveZone');
@@ -33,28 +64,45 @@ function activeScreen() {
     });
 };
 activeScreen();
-
+// ---------------------------------------
+const mainZone = document.querySelector('.slider__mainZone');
+const leftBar = document.querySelector('.leftBar');
+const rightBar = document.querySelector('.rightBar');
+const bottomLine = document.querySelector('.slider__bottom');
 let curentSlide = 0;
-const BAR1 = document.querySelectorAll('.bar');
+let BAR1 = document.querySelectorAll('.bar');
 
-BAR1.forEach( each => each.addEventListener('click', (event) => {
+
+
+BAR1.forEach( each => each.addEventListener("click", (event) => {
   some.innerHTML = "";
   curentSlide++;
-  if(curentSlide ==2){
-    curentSlide = 0;
-  }
-  else if(curentSlide == -1){
-    curentSlide = 1
-  }
-  some.innerHTML = slides[curentSlide];
-  if (curentSlide == 0) {activeScreen()};
+    if (curentSlide > 1){curentSlide = 0}
+    if(curentSlide == 0){
+        some.innerHTML = slides[0];
+        mainZone.classList.remove('slide2');
+        leftBar.classList.remove('leftBar2');
+        rightBar.classList.remove('rightBar2');
+        bottomLine.classList.remove('opacity');
+       
+    }
+    else if (curentSlide == 1){
+        some.innerHTML = slides[1];
+        mainZone.classList.add('slide2');
+        leftBar.classList.add('leftBar2');
+        rightBar.classList.add('rightBar2');
+        bottomLine.classList.add('opacity');
+    }
+    activeScreen();
 }))
+// ------------------------------------
+
 
 const MENU2 = document.getElementById('menu2');
-let array = document.querySelector('.imagesStack');
+let array = document.querySelector('.portfolio__flex');
 
 MENU2.addEventListener('click', (event)=>{
-  MENU2.querySelectorAll('a').forEach(el => el.classList.remove('active'));
+  MENU2.querySelectorAll('p').forEach(el => el.classList.remove('active'));
   event.target.classList.add('active');
 
   let newArray = [...array.querySelectorAll(".img")];
@@ -66,7 +114,7 @@ MENU2.addEventListener('click', (event)=>{
 let borderValue = 0;
 
 array.addEventListener("click", (event) => {
-  if (event.target.classList.contains("flexContainer")){}
+  if (event.target.classList.contains("portfolio__flex")){}
   else if ( event.target.classList.contains("bordered")){event.target.classList.remove("bordered");}
   else {array.querySelectorAll('.img').forEach(el => el.classList.remove('bordered'));
   event.target.classList.add('bordered');}
