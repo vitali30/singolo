@@ -84,7 +84,7 @@ BAR1.forEach( each => each.addEventListener("click", (event) => {
         leftBar.classList.remove('leftBar2');
         rightBar.classList.remove('rightBar2');
         bottomLine.classList.remove('opacity');
-       
+        activeScreen();
     }
     else if (curentSlide == 1){
         some.innerHTML = slides[1];
@@ -93,7 +93,7 @@ BAR1.forEach( each => each.addEventListener("click", (event) => {
         rightBar.classList.add('rightBar2');
         bottomLine.classList.add('opacity');
     }
-    activeScreen();
+   
 }))
 // ------------------------------------
 
