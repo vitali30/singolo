@@ -1,19 +1,16 @@
+// Смена жекорации пунктов меню при нажатии
 const MENU = document.getElementById("menu");
-
-
 
 MENU.addEventListener('click', (event)=>{
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
     event.target.classList.add('active');
 });
-// ---------------------------------------
-
+// Смена декорации пунктов меню при скродде
 const menu = document.querySelector("nav ul");
 const menuLinks = document.querySelectorAll("nav ul li a");
 
 document.addEventListener("scroll", activateLink);
 window.onload = activateLink();
-
 function activateLink(event) {
   const positionY = window.scrollY;// нужно отслеживать текущее положение экрана
   const anchors = document.querySelectorAll('[id]');// создаем массив со всеми id (нас интересуют секции, именно так мы можем их перебрать)
@@ -30,9 +27,21 @@ function activateLink(event) {
       }
     });
 };
-  
-// ------------------------------------
-
+// Активация экранов телефонов
+function activeScreen() {
+  const activeVertical = document.querySelector('.iphoneVerticalActiveZone');
+  const screenVertical = document.querySelector('.iphoneVerticalActiveScreen');
+  const activeHorizontal = document.querySelector('.iphoneHorizontalActiveZone');
+  const screenHorizontal = document.querySelector('.iphoneHorizontalScreen');
+  activeVertical.addEventListener('click', (event)=>{
+    screenVertical.classList.contains("opacity")?screenVertical.classList.remove("opacity"):screenVertical.classList.add('opacity');
+    });
+  activeHorizontal.addEventListener('click', (event)=>{
+    screenHorizontal.classList.contains("opacity")?screenHorizontal.classList.remove("opacity"): screenHorizontal.classList.add('opacity');
+    });
+};
+activeScreen();
+// Смена слайдов
 const slides = [`
                     <div class = "image__vertical">
                         <div class = "iphoneVertical"></div>
@@ -47,32 +56,13 @@ const slides = [`
                     </div>`, 
   `<div></div>`
 ]
-
-
-function activeScreen() {
-  const activeVertical = document.querySelector('.iphoneVerticalActiveZone');
-  const screenVertical = document.querySelector('.iphoneVerticalActiveScreen');
-  const activeHorizontal = document.querySelector('.iphoneHorizontalActiveZone');
-  const screenHorizontal = document.querySelector('.iphoneHorizontalScreen');
-  
-  activeVertical.addEventListener('click', (event)=>{
-    screenVertical.classList.contains("opacity")?screenVertical.classList.remove("opacity"):screenVertical.classList.add('opacity');
-    });
-  
-  activeHorizontal.addEventListener('click', (event)=>{
-    screenHorizontal.classList.contains("opacity")?screenHorizontal.classList.remove("opacity"): screenHorizontal.classList.add('opacity');
-    });
-};
-activeScreen();
-// ---------------------------------------
 const mainZone = document.querySelector('.slider__mainZone');
 const leftBar = document.querySelector('.leftBar');
 const rightBar = document.querySelector('.rightBar');
 const bottomLine = document.querySelector('.slider__bottom');
 let curentSlide = 0;
 let BAR1 = document.querySelectorAll('.bar');
-
-
+const some = document.querySelector(".mainZone__image");
 
 BAR1.forEach( each => each.addEventListener("click", (event) => {
   some.innerHTML = "";
@@ -93,24 +83,19 @@ BAR1.forEach( each => each.addEventListener("click", (event) => {
         rightBar.classList.add('rightBar2');
         bottomLine.classList.add('opacity');
     }
-   
 }))
-// ------------------------------------
-
-
-const MENU2 = document.getElementById('menu2');
+// Смена активности меню портфолио
+const MENU2 = document.querySelector(".portfolio__menu");
 let array = document.querySelector('.portfolio__flex');
 
 MENU2.addEventListener('click', (event)=>{
-  MENU2.querySelectorAll('p').forEach(el => el.classList.remove('active'));
+  MENU2.querySelectorAll('li').forEach(el => el.classList.remove('active'));
   event.target.classList.add('active');
-
   let newArray = [...array.querySelectorAll(".img")];
-
   newArray.unshift(newArray.pop());
   newArray.forEach( pic => array.append(pic) );
 });
-
+// Установка границ картинок в портфолион
 let borderValue = 0;
 
 array.addEventListener("click", (event) => {
@@ -119,7 +104,7 @@ array.addEventListener("click", (event) => {
   else {array.querySelectorAll('.img').forEach(el => el.classList.remove('bordered'));
   event.target.classList.add('bordered');}
 });
-
+// Формирования письма с темой
 const BUTTON = document.getElementById('button');
 const CLOSEBUTTON = document.getElementById('closeButton');
 
@@ -150,7 +135,7 @@ BUTTON.addEventListener('click', ()=>{
   };
 });
 
-
+// Закрытие окна письма
 CLOSEBUTTON.addEventListener('click', ()=>{
   document.getElementById('topic').innerText = '';
   document.getElementById('result').innerText = '';
@@ -158,4 +143,3 @@ CLOSEBUTTON.addEventListener('click', ()=>{
   event.preventDefault();
 
 });
-
