@@ -16,8 +16,9 @@
     padding: 0;
 }
 html, body{
-    width: 1020px;
+    max-width: 1020px;
     scroll-behavior: smooth;
+    margin: 0 auto;
 }
 .content{
     overflow-x: hidden;
@@ -54,7 +55,7 @@ h4{
     font-size: 30px;
     line-height: 36px;
     color: #F0D8D9;
-    padding: 60px 0 0 39px;
+    padding: 60px 0 0 40px;
 }
 h5{
     font-family: "Lato";
@@ -63,6 +64,7 @@ h5{
     line-height: 30px;
     color: #767E9E;
     padding: 20px 40px 0 40px;
+    text-align: justify;
 }
 p{
     text-align: justify;
@@ -116,6 +118,9 @@ header{
 }
 .header__menu ul{
     display: flex;
+}
+.header__logotype1{
+    display: none;
 }
 /* SLIDER */
 .box{
@@ -225,6 +230,7 @@ header{
     width: 100%;
     height: 101%;
     margin: 0% 0 0 0%;
+    background-size: cover;
     background-image: url(../singolo/assets/images/Slide-2.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -240,7 +246,7 @@ header{
 .services{
     scroll-margin-top: 80px;
     width: 100%;
-    height: 494px;
+    /* height: 494px; */
     background-color: #F2F2F2;
 }
 .services__bottom{
@@ -252,16 +258,16 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 2.6%;
+    margin-top: 3.6%;
     width: 93.4%;
     padding-right: 3%;
     padding-left: 37px;
 }
 .services__container{
     display: flex;
-    width: 32%;
-    height: 25%;
-    align-items: center;
+    width: 300px;
+    height: 100px;
+    /* align-items: center; */
     margin: 1% 0% 4% 0%;
 }
 .services-info{
@@ -331,8 +337,8 @@ header{
     line-height: 22px;
     color: #767e9e;
     list-style-type: none;
-    margin: 0 15px 0 0;
-    padding: 0 7px;
+    margin: 0 13px 0 0;
+    padding: 0 5px;
 }
 .portfolio__menu li.active{
     color: #c5c5c5;
@@ -354,6 +360,7 @@ header{
     width: 95%;
     height: 72%;
     margin: 0px 0 0 28px;
+    padding-bottom: 60px;
 }
 .img{
     width: 22.71%;
@@ -361,6 +368,7 @@ header{
     background-repeat: no-repeat;
     background-position: center;
     margin: 10px;
+    background-size: cover;
 }
 .image1{
     background-image: url(../singolo/assets/images/portfolio/portfolio-1.png);
@@ -398,6 +406,9 @@ header{
 .image12{
     background-image: url(../singolo/assets/images/portfolio/portfolio-12.png);
 }
+.img:nth-child(n + 13) {
+    display: none;
+  }
 .bordered{
     border: 5px solid #F06C64;
     width: 210px;
@@ -422,11 +433,15 @@ header{
     height: 65%;
     padding: 40px 40px 0 40px;
 }
+.aboutus__container p{
+    padding: 0 20px 0 0;
+}
 .foto{
     width: 94%;
     height: 64%;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 .aboutus_foto1{
     background-image: url(../singolo/assets/images/photo\ \(2\).png);
@@ -446,7 +461,7 @@ header{
     line-height: 22px;
     text-align: justify;
     color: #767E9E;
-    margin: 3% 0 0 0;
+    margin: 3% 5px 0 0;
     text-align: justify;
 }
 .aboutus__links{
@@ -676,7 +691,7 @@ header{
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns:27% 54% 17%;
+    grid-template-columns: 33% 42% 23%;
 }
 .footer__lable{
     align-items: center;
@@ -709,5 +724,260 @@ header{
     .slider{
         height: 56.9vw;
     }
+    .portfolio{
+        width: 100%;
+        height: auto ;
+    }
+    .img{
+        flex: 1 0 25%;
+       width: auto;
+       height: 24vw;
+
+    }
+    .img::before{
+        content: "";
+        float:left;
+        padding-top: 100%;
+        
+    }
+    .foto{
+        width: 28.39vw;
+      height: 28.39vw;
+      background-repeat: no-repeat;
+      background-position: center;
+      /* margin: 10px; */
+      background-size: cover;
+       
+    }
+    .aboutus{
+        height: auto;
+        
+    }
+
+
+}
+
+
+
+
+
+/* ------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .header{
+        display: block;
+
+    }
+    .header__logotype{
+        display: none;
+
+    }
+    .header__menu ul{
+        display: none;
+       
+    }
+    .header__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 24px;
+    }
+     .header__logotype1{
+        display: inline-block;
+        width: 60%;
+    }
+    .menu-btn{
+        width: 50px;
+        height: 50px;
+        background-image: url(../singolo/assets/images/m-menu.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    h2{
+        padding: 59px 0 0 30px;
+    }
+    h4{
+       
+        padding: 60px 0 0 30px;
+    }
+    h5{
+        
+        padding: 20px 25px 0 30px;
+       
+    }
+    .services__flex {
+      
+        padding-left: 17px;
+    }
+    .portfolio__menu {
+        width: 90%;
+        margin: 8px 30px;
+    }
+    .portfolio__menu li {
+        margin: 0 13px 0 0;
+        padding: 0 3px;
+    }
+    .services-info {
+        width: 220px;
+        height: 77px;
+        padding-left: 10px;
+    }
+    .img{
+        flex: 1 0 34%;
+       width: auto;
+       height: 35vw;
+       margin: 7.5px;
+    }
+    .portfolio__flex {
+        
+        width: 90%;
+        height: 70%;
+        margin: 0px 0 0 20px;
+        padding-bottom: 35px;
+    }
+    .img:nth-child(n + 9) {
+        display: none;
+      }
+      .aboutus__adepts {
+        display: block;
+        grid-template-columns: 100%;
+        grid-template-rows: 90vw 90vw 90vw;
+        width: 83%;
+        height: 65%;
+        padding: 10px 30px 10% 30px;
+    }
+    .aboutus__container{
+        padding-top: 20px;
+      
+    }
+    .foto{
+        width: 83.52vw;
+        height: 82.35vw;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: auto;
+        margin-right: auto;
+        background-size: cover;
+      
+    }
+    .aboutus{
+        height: auto;
+        
+    }
+    .aboutus__container p {
+        font-family: "Lato";
+        font-size: 12px;
+        line-height: 22px;
+        text-align: justify;
+        color: #767E9E;
+        margin: 3% 0px 0 0;
+        text-align: justify;
+        padding-right: 0;
+    }
+
+    .qote{
+        width: 100%;
+        height: auto;
+        background-color: #F06C64;
+    }
+    .qote__text {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 30px;
+        color: #F0D8D9;
+        margin: 4% 14% 0 30px;
+    }
+
+    .qote__grid {
+        display: block;
+    width: 85%;
+    padding: 2rem 30px 0 30px;
+    }
+    #button{
+        width: 82.3vw;
+       
+    }
+    .qote__contactInfo{
+        margin: 32px 0 0 0;
+        padding-bottom: 42px;
+    }
+    .footer__lable{
+        display: none;
+    }
+    .footer__grid {
+        display: block;
+    }
+    .footer__contacts {
+        display: flex;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+        padding-top: 20px;
+    }
+}
+  .burger__menu{
+    width: 278px;
+    height: 100%;
+    position: fixed;
+    background-color: #2D303A;
+    top: 89px;
+    left: 0;
+  }
+  .not_display{
+      display: none;
+  }
+  .burger__list ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
     
+    font-family: "Lato";
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.035em;
+    font-weight: 600;
+  }
+  .burger__list ul li a:hover{
+    cursor: pointer;
+    color: #f06c64;
+}
+.burger__list a.active{
+    color: #f06c64;
+}
+.burger__list a:not(.active):hover{
+    cursor: pointer;
+    color: #f06c64;
+}
+
+
+
+
+  .burger__list ul li{
+    list-style-type: none;
+    margin-top: 27px;
+  }
+  .burger__list{
+      height: 812px;
+  }
+  .burger__list ul{
+    height: 812px;
+    padding-top: 140px;
+    padding-left: 71px;
+}
+.burgtr__allMenu{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #0008;
+    margin-top: 89px;
+}
+.rotate{
+    transform: rotate(90deg);
+}
+.moved{
+    width: 90%;
 }

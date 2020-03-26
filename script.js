@@ -130,16 +130,56 @@ BUTTON.addEventListener('click', ()=>{
       else{
         document.getElementById('result').innerText ='Описание : ' + textArea;
       };
-
     document.getElementById('messageBlock').classList.remove('hiden');
   };
 });
-
 // Закрытие окна письма
 CLOSEBUTTON.addEventListener('click', ()=>{
   document.getElementById('topic').innerText = '';
   document.getElementById('result').innerText = '';
   document.getElementById('messageBlock').classList.add('hiden')
   event.preventDefault();
-
 });
+// Смена header при 375px
+const header = document.querySelector(".header");
+const headerSlides = [
+    `<div class="header__logotype">
+    <h1>SINGOLO<span class="header__star">*</span></h1>
+  </div>
+  <nav class = "header__menu" id="menu">
+    <ul>
+        <li><a href="#slider" class = "activeg">HOME</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#aboutus">ABOUT</a></li>
+        <li><a href="#getAQuote">CONTACT</a></li>
+    </ul>
+  </nav>`, 
+  `<div class = "hamburger"></div>
+  <div class="header__logotype">
+    <h1>SINGOLO<span class="header__star">*</span></h1>
+  </div>`
+]
+
+ // alert( document.documentElement.clientWidth );
+
+
+ //Бургер меню
+const burger = document.querySelector('.menu-btn');
+const burgerSlide = document.querySelector('.burgtr__allMenu');
+const burgerButton = document.querySelector('.menu-btn');
+const logotipe = document.querySelector('.header__logotype1');
+
+burger.addEventListener('click', ()=>{
+  if(burgerSlide.classList.contains('not_display')){
+    burgerSlide.classList.remove('not_display');
+    burgerButton.classList.add('rotate');
+    logotipe.classList.add('moved');
+  }
+  else {burgerSlide.classList.add('not_display');
+  burgerButton.classList.remove('rotate');
+  logotipe.classList.remove('moved');
+  }
+  activateLink();
+});
+// Смена декорации пунктов меню при скродде
