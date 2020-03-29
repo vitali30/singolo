@@ -206,7 +206,7 @@ header{
 }
 .iphoneHorizontal{
     width: 92%;
-    height: 35%;
+    height: 35.6%;
     margin: 36% 0rem 0rem 1%;
     box-shadow: 2vw 2vw 0px 0px rgba(10,9,10,0.16);
     border-radius: 2vw;
@@ -222,9 +222,9 @@ header{
 }
 .iphoneHorizontalScreen{
     width: 66.8%;
-    height: 31.2%;
+    height: 31.5%;
     background-color: #000000;
-    margin: -39.6% 0rem 0rem 13.2%;
+    margin: -40.5% 0rem 0rem 13.2%;
 }
 .slide2{
     float: left;
@@ -775,14 +775,14 @@ header{
         margin-left: -80vw;
     }
     .iphoneVerticalActiveScreen{
-        width: 18.2vw;
+        width: 18.6vw;
         height: 32.4vw;
-        margin: -38vw 0rem 0rem 3vw;
+        margin: -38vw 0rem 0rem 3.2vw;
     }
     .iphoneHorizontalScreen{
-        width: 31.9vw;
-        height: 18.2vw;
-        margin: -19vw 0rem 0rem 6vw;    
+        width: 32.5vw;
+        height: 18.5vw;
+        margin: -19.1vw 0rem 0rem 6.3vw;
     }
 }
 /* ------------------------------------------------------------------------- */
