@@ -182,6 +182,25 @@ burger.addEventListener('click', ()=>{
   }
   activateLink();
 });
+
+
+
+
+const newBurger = burgerSlide.querySelector('ul');
+
+
+
+
+
+
+newBurger.addEventListener('click', () => {
+  if (event.target.classList.contains("not_push")){}
+  else{burgerSlide.classList.add('not_display');
+  burgerButton.classList.remove('rotate');
+  logotipe.classList.remove('moved');}
+});
+
+
 // Смена декорации пунктов меню при скролле
 let backGround1 = document.getElementById('slider');
 document.querySelector('.leftBar').onclick = sliderLeft;
