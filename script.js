@@ -132,13 +132,15 @@ BUTTON.addEventListener('click', ()=>{
       };
     document.getElementById('messageBlock').classList.remove('hiden');
   };
+  
 });
 // Закрытие окна письма
 CLOSEBUTTON.addEventListener('click', ()=>{
   document.getElementById('topic').innerText = '';
   document.getElementById('result').innerText = '';
-  document.getElementById('messageBlock').classList.add('hiden')
+  document.getElementById('messageBlock').classList.add('hiden');
   event.preventDefault();
+  document.forms[0].reset();
 });
 // Смена header при 375px
 const header = document.querySelector(".header");
@@ -160,8 +162,6 @@ const headerSlides = [
     <h1>SINGOLO<span class="header__star">*</span></h1>
   </div>`
 ]
-
- // alert( document.documentElement.clientWidth );
 
 
  //Бургер меню
