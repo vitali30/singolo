@@ -132,11 +132,13 @@ header{
     width: 100%;
     height: 594px;
     background-color: #F06C64;
+    transition: all ease 0.5s;
 }
 .slider__bottom{
     width: 100%;
     height: 6px;
     background-color: #EA676B;
+    transition: all ease 0.5s;
 }
 .slider__mainZone{
     display: grid;
@@ -170,32 +172,30 @@ header{
     background-repeat: no-repeat;
     background-position: center;
 }
-.mainZone__image{
-    display: flex;
-   transition: all ease 1s;
-}
 .image__vertical{
     width: 40%;
     height: 100%;
+    transition: all ease 0s;
 }
 .image__horizontal{
     width: 60%;
     height: 100%;
+    transition: all ease 0s;
 }
 .iphoneVertical{
     width: 65%;
     height: 77%;
     margin: 16% 0rem 0rem 6%;
-    box-shadow: 25px 25px 0 #ce5d56;
-    border-radius: 1rem;
+    box-shadow: 2vw 2vw 0 rgba(10,9,10,0.16);
+    border-radius: 2vw;
     background-image: url(../singolo/assets/images/verticalPhone.png);
     background-size: 100% 100%;
 }
 .iphoneVerticalActiveScreen{
     width: 57%;
-    height: 59.3%;
+    height: 55.8%;
     background-color: #000000;
-    margin: -124% 0rem 0rem 10%;
+    margin: -119.8% 0rem 0rem 10.1%;
 }
 .iphoneVerticalActiveZone{
     width: 14%;
@@ -208,8 +208,8 @@ header{
     width: 92%;
     height: 35%;
     margin: 36% 0rem 0rem 1%;
-    box-shadow: 26px 25px 0px 0px #ce5d56;
-    border-radius: 1rem;
+    box-shadow: 2vw 2vw 0px 0px rgba(10,9,10,0.16);
+    border-radius: 2vw;
     background-image: url(../singolo/assets/images/HorizontalPhone.png);
     background-size: 100%;
 }
@@ -221,32 +221,53 @@ header{
     border-radius: 50%;
 }
 .iphoneHorizontalScreen{
-    width: 67%;
-    height: 32.2%;
+    width: 66.8%;
+    height: 31.2%;
     background-color: #000000;
-    margin: -39.6% 0rem 0rem 13%;
+    margin: -39.6% 0rem 0rem 13.2%;
 }
 .slide2{
-    width: 100%;
-    height: 101%;
+    float: left;
+    width: 50%;
+    height: 100%;
     margin: 0% 0 0 0%;
     background-size: cover;
     background-image: url(../singolo/assets/images/Slide-2.svg);
     background-repeat: no-repeat;
     background-position: center;
+}
+.slide1{
+    float: left;
+    width: 50%;
+    height: 100%;
+    margin: 0% 0 0 0%;
     display: flex;
 }
-.leftBar2{
-    padding: 0% 0 0 9%;
+.slider__displayZone{
+    /* width: 827px;
+    height: 600px; */
+    overflow: hidden;
 }
-.rightBar2{
-    margin-left: 78%;
+.polosa{
+    width: 200%;
+    height: 100%;
+    position: inherit;
+    display: block;
+    margin-left: 0;
+    transition: all ease 0.5s;
+}
+.left{
+    margin-left: -826px;
+}
+.polosa::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 /* SERVICES */
 .services{
     scroll-margin-top: 80px;
     width: 100%;
-    /* height: 494px; */
     background-color: #F2F2F2;
 }
 .services__bottom{
@@ -267,7 +288,6 @@ header{
     display: flex;
     width: 300px;
     height: 100px;
-    /* align-items: center; */
     margin: 1% 0% 4% 0%;
 }
 .services-info{
@@ -328,7 +348,7 @@ header{
 .portfolio__menu li{
     border-radius: 5px;
     background-color: #0f0f0f;
-    border: 1px solid #666d89;
+    border: 1px solid #767E9E;
     text-decoration: none;
     margin: 0 9px 0 0;
     font-size: 12px;
@@ -711,6 +731,7 @@ header{
     align-items: center;
     align-self: center;
 }
+
 @media (max-width: 1020px) {
     /* header{
         width: 1020px;
@@ -745,7 +766,6 @@ header{
       height: 28.39vw;
       background-repeat: no-repeat;
       background-position: center;
-      /* margin: 10px; */
       background-size: cover;
        
     }
@@ -753,14 +773,20 @@ header{
         height: auto;
         
     }
-
-
+    .left{
+        margin-left: -79vw;
+    }
+    .iphoneVerticalActiveScreen{
+        width: 18.2vw;
+        height: 32.4vw;
+        margin: -38vw 0rem 0rem 3vw;
+    }
+    .iphoneHorizontalScreen{
+        width: 31.9vw;
+        height: 18.2vw;
+        margin: -19vw 0rem 0rem 6vw;    
+    }
 }
-
-
-
-
-
 /* ------------------------------------------------------------------------- */
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -896,7 +922,7 @@ header{
     padding: 2rem 30px 0 30px;
     }
     #button{
-        width: 82.3vw;
+        width: 80.5vw;
        
     }
     .qote__contactInfo{
@@ -916,7 +942,9 @@ header{
         justify-content: center;
         padding-top: 20px;
     }
+    
 }
+/* --------------------------------------------------------------------- */
   .burger__menu{
     width: 278px;
     height: 100%;
@@ -950,10 +978,6 @@ header{
     cursor: pointer;
     color: #f06c64;
 }
-
-
-
-
   .burger__list ul li{
     list-style-type: none;
     margin-top: 27px;
@@ -981,3 +1005,9 @@ header{
 .moved{
     width: 90%;
 }
+@media (min-width: 768px) {
+    .burgtr__allMenu{
+        display: none;
+    }
+}
+

@@ -42,48 +42,48 @@ function activeScreen() {
 };
 activeScreen();
 // Смена слайдов
-const slides = [`
-                    <div class = "image__vertical">
-                        <div class = "iphoneVertical"></div>
-                        <div class = "iphoneVerticalActiveScreen opacity"></div>
-                        <div class = "iphoneVerticalActiveZone opacity"></div>
-                    </div>
-                    <div class="image__horizontal">
-                        <div class = "iphoneHorizontal"></div>
-                        <div class = "iphoneHorizontalScreen opacity" ></div>
-                        <div class = "iphoneHorizontalActiveZone opacity"></div>
+// const slides = [`
+//                     <div class = "image__vertical">
+//                         <div class = "iphoneVertical"></div>
+//                         <div class = "iphoneVerticalActiveScreen opacity"></div>
+//                         <div class = "iphoneVerticalActiveZone opacity"></div>
+//                     </div>
+//                     <div class="image__horizontal">
+//                         <div class = "iphoneHorizontal"></div>
+//                         <div class = "iphoneHorizontalScreen opacity" ></div>
+//                         <div class = "iphoneHorizontalActiveZone opacity"></div>
                         
-                    </div>`, 
-  `<div></div>`
-]
-const mainZone = document.querySelector('.slider__mainZone');
-const leftBar = document.querySelector('.leftBar');
-const rightBar = document.querySelector('.rightBar');
-const bottomLine = document.querySelector('.slider__bottom');
-let curentSlide = 0;
-let BAR1 = document.querySelectorAll('.bar');
-const some = document.querySelector(".mainZone__image");
+//                     </div>`, 
+//   `<div></div>`
+// ]
+// const mainZone = document.querySelector('.slider__mainZone');
+// const leftBar = document.querySelector('.leftBar');
+// const rightBar = document.querySelector('.rightBar');
+// const bottomLine = document.querySelector('.slider__bottom');
+// let curentSlide = 0;
+// let BAR1 = document.querySelectorAll('.bar');
+// const some = document.querySelector(".mainZone__image");
 
-BAR1.forEach( each => each.addEventListener("click", (event) => {
-  some.innerHTML = "";
-  curentSlide++;
-    if (curentSlide > 1){curentSlide = 0}
-    if(curentSlide == 0){
-        some.innerHTML = slides[0];
-        mainZone.classList.remove('slide2');
-        leftBar.classList.remove('leftBar2');
-        rightBar.classList.remove('rightBar2');
-        bottomLine.classList.remove('opacity');
-        activeScreen();
-    }
-    else if (curentSlide == 1){
-        some.innerHTML = slides[1];
-        mainZone.classList.add('slide2');
-        leftBar.classList.add('leftBar2');
-        rightBar.classList.add('rightBar2');
-        bottomLine.classList.add('opacity');
-    }
-}))
+// BAR1.forEach( each => each.addEventListener("click", (event) => {
+//   some.innerHTML = "";
+//   curentSlide++;
+//     if (curentSlide > 1){curentSlide = 0}
+//     if(curentSlide == 0){
+//         some.innerHTML = slides[0];
+//         mainZone.classList.remove('slide2');
+//         leftBar.classList.remove('leftBar2');
+//         rightBar.classList.remove('rightBar2');
+//         bottomLine.classList.remove('opacity');
+//         activeScreen();
+//     }
+//     else if (curentSlide == 1){
+//         some.innerHTML = slides[1];
+//         mainZone.classList.add('slide2');
+//         leftBar.classList.add('leftBar2');
+//         rightBar.classList.add('rightBar2');
+//         bottomLine.classList.add('opacity');
+//     }
+// }))
 // Смена активности меню портфолио
 const MENU2 = document.querySelector(".portfolio__menu");
 let array = document.querySelector('.portfolio__flex');
@@ -182,4 +182,43 @@ burger.addEventListener('click', ()=>{
   }
   activateLink();
 });
-// Смена декорации пунктов меню при скродде
+// Смена декорации пунктов меню при скролле
+let backGround1 = document.getElementById('slider');
+document.querySelector('.leftBar').onclick = sliderLeft;
+let backGround2 = document.querySelector('.slider__bottom');
+
+function sliderLeft(){
+    let polosa = document.querySelector('.polosa');
+    
+    if (polosa.classList.contains('left')){
+      polosa.classList.remove('left');
+      backGround1.style.backgroundColor = "#F06C64";
+      backGround2.style.backgroundColor =  "#EA676B";
+    }
+
+    else {polosa.classList.add('left');
+      backGround1.style.backgroundColor = "#648BF0";
+      backGround2.style.backgroundColor =  "rgb(53, 96, 161)";
+      }
+
+    
+}
+
+document.querySelector('.rightBar').onclick = sliderRight;
+// let left = 0;
+
+function sliderRight(){
+    let polosa = document.querySelector('.polosa');
+    
+    if (polosa.classList.contains('left')){
+      polosa.classList.remove('left');
+      backGround1.style.backgroundColor = "#F06C64";
+      backGround2.style.backgroundColor =  "#EA676B";
+    }
+
+    else {polosa.classList.add('left');
+    backGround1.style.backgroundColor = "#648BF0";
+    backGround2.style.backgroundColor =  "rgb(53, 96, 161)";
+  }
+    
+}
